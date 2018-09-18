@@ -1,9 +1,6 @@
 
 
 // 상단 탑 세로 길이 지침 영역
-var isTime1 = 0;
-var isTime2 = 0;
-var isTime3 = 0;
 
 $(function () {
   $(window).scroll(function () {
