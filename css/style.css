@@ -1,107 +1,71 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* 리셋 기본 css */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
+
 a, a:hover, a:active {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
 /* 리셋 기본 css */
-
-// 상단 탑 세로 길이 지침 영역 
 .top_page {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: #6c9cf5;
-    height: 5px;
-    transition: 0.3s all ease;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #6c9cf5;
+  height: 5px;
+  transition: 0.3s all ease;
 }
-.top_page div.percent_bar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right:0;
-    background: #aaa;
-    height: 5px;
-    transition: 0.3s all ease;
-}
-// 상단 탑 세로 길이 지침 영역 
 
-// 페이지 길이 늘임용 더미 CSS
+.top_page div.percent_bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #aaa;
+  height: 5px;
+  transition: 0.3s all ease;
+}
 
 p {
   line-height: 30px;
 }
-
-// 페이지 길이 늘임용 더미 CSS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 끝
