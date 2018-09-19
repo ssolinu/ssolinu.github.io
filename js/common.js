@@ -44,4 +44,14 @@ $(function () {
 
 // 상단 탑 세로 길이 지침 영역
 
+// D데이 타이머 
+$('#clock').countdown('2018/11/10 16:00:00', function (event) {
+  $(this).html(
+    event.strftime(''
+      + '<span>%D</span> 일 '
+      + '<span>%H</span> 시간 '
+      + '<span>%M</span> 분 '
+      + '<span>%S</span> 초'));
+});
+// D데이 타이머 
 

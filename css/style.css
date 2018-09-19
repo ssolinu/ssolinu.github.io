@@ -90,6 +90,13 @@ body {
   background-color: #F9F1FF;
 }
 
+.countdown {
+  font-size: 2em;
+}
+.countdown #clock span {
+  font-size: 3em;
+}
+
 p {
   line-height: 30px;
 }
