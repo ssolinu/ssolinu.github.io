@@ -83,11 +83,22 @@ body {
 
 // 배경색 지정
 
+// 인트로
+div.intro {
+	height: 100vh;
+}
+// 인트로
+
 // 디데이카운터
 .countdown {
-	font-size: 2em;
-	#clock span{
-		font-size: 3em;
+	margin-top: 50vh;
+	padding-left: 20px;
+	font-size: 8vw;
+	#clock {
+		width: 60vw;
+		span {
+			font-size: 1.8em;
+		}
 	}
 }
 // 디데이카운터
@@ -99,7 +110,7 @@ p {
 }
 
 main section div {
-	height: 800px;
+	// height: 800px;
 	border: 1px solid #333; box-sizing: border-box;
 }
 #scrollValue {

@@ -90,11 +90,20 @@ body {
   background-color: #F9F1FF;
 }
 
+div.intro {
+  height: 100vh;
+}
+
 .countdown {
-  font-size: 2em;
+  margin-top: 50vh;
+  padding-left: 20px;
+  font-size: 8vw;
+}
+.countdown #clock {
+  width: 60vw;
 }
 .countdown #clock span {
-  font-size: 3em;
+  font-size: 1.8em;
 }
 
 p {
@@ -102,7 +111,6 @@ p {
 }
 
 main section div {
-  height: 800px;
   border: 1px solid #333;
   box-sizing: border-box;
 }
