@@ -55,7 +55,7 @@ a, a:hover, a:active {
     left: 0;
     top: 0;
     right:0;
-    background: #aaa;
+    background: #efefef;
     height: 5px;
     transition: 0.3s all ease;
 }
@@ -84,8 +84,13 @@ body {
 // 배경색 지정
 
 // 인트로
-div.intro {
+div.intro, {
 	height: 100vh;
+	// border: 1px solid #333; box-sizing: border-box;
+	background: url(../img/photo_2.jpg) no-repeat;
+	background-size: cover;
+	background-position: right;
+
 }
 // 인트로
 
@@ -111,7 +116,7 @@ p {
 
 main section div {
 	// height: 800px;
-	border: 1px solid #333; box-sizing: border-box;
+	// border: 1px solid #333; box-sizing: border-box;
 }
 #scrollValue {
 	position: fixed;

@@ -61,7 +61,7 @@ a, a:hover, a:active {
   left: 0;
   top: 0;
   right: 0;
-  background: #aaa;
+  background: #efefef;
   height: 5px;
   transition: 0.3s all ease;
 }
@@ -92,6 +92,9 @@ body {
 
 div.intro {
   height: 100vh;
+  background: url(../img/photo_2.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
 .countdown {
@@ -108,11 +111,6 @@ div.intro {
 
 p {
   line-height: 30px;
-}
-
-main section div {
-  border: 1px solid #333;
-  box-sizing: border-box;
 }
 
 #scrollValue {
