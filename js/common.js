@@ -40,7 +40,7 @@ $(function () {
     }
 
     // 인트로 배경 이동
-    $(".intro").css("background-size", (140-(value/40)) + "%");
+    $(".intro").css("background-size", (140-(value/30)) + "%");
 
   });
 });
@@ -61,8 +61,10 @@ $('#clock').countdown('2018/11/10 16:00:00', function (event) {
 // 신랑신부 토글
 $(".box").click(function () {
   $(".box").removeClass("on");
+  // $(".tel").css("display", "none");
   $(".box").css("width", "25%");
   $(this).css("width", "75%");
+  // $(this).children(".tel").css("left", "0");
   $(this).addClass("on");
 });
 // 신랑신부 토글

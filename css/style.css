@@ -163,13 +163,14 @@ div.contact .groom .title, div.contact .bride .title {
   border-radius: 0 20px 0 0/0 20px 0 0;
 }
 div.contact .groom.on .tel, div.contact .bride.on .tel {
+  bottom: 50px;
   opacity: 1;
-  transition: 2s all ease;
+  transition: 1s all ease;
 }
 div.contact .groom .tel, div.contact .bride .tel {
   position: absolute;
+  bottom: -100%;
   width: 100%;
-  bottom: 50px;
   opacity: 0;
   font-size: 0.9em;
   text-align: center;

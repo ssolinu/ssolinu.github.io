@@ -166,14 +166,17 @@ div.contact {
 
 		&.on {
 			.tel {
+				bottom: 50px;
 				opacity: 1;
-				transition: 2s all ease;
+				transition: 1s all ease;
 			}
 		}
 		.tel {
+			
 			position: absolute;
+			bottom: -100%;
 			width: 100%;
-			bottom: 50px;
+			// bottom: 50px;
 			opacity: 0;
 			font-size: 0.9em;
 			text-align: center;
