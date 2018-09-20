@@ -95,7 +95,7 @@ body {
 div.intro {
   height: 100vh;
   background: url(../img/photo_01.jpg) no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: right;
 }
 
