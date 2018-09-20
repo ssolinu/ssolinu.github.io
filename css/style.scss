@@ -132,6 +132,8 @@ div.summary {
 // 신랑신부
 div.contact {
 	height: 100vh;
+	font-size: 0.8em;
+
 	.box {
 		height: 100vh;
 		float: left;
@@ -148,11 +150,11 @@ div.contact {
 	.groom, .bride {
 		background-size: cover;
 		background-position: center;
+		position: relative;
 		.title {
 			width: 3em;
 			text-align: center;
 			line-height: 0.5em;
-			font-size: 0.8em;
 			margin: 0 auto;
 			margin-top: 1em;
 			padding: 0.5em;
@@ -169,7 +171,29 @@ div.contact {
 			}
 		}
 		.tel {
+			position: absolute;
+			width: 100%;
+			bottom: 50px;
 			opacity: 0;
+			font-size: 0.9em;
+			text-align: center;
+			color: #fff;
+			text-shadow: 0px 0px 10px #333;
+			div.img {
+				margin-top: 20px;
+				width: 2.6em;
+				height: 2.5em;
+				border: 1px solid #333; box-sizing: border-box;
+				border-radius: 50%;
+				padding: 10px;
+				margin: 0 auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				img {
+					// width: 70%;
+					height: 100%;
+					margin-left: 10%;
+				}
+			}
 		}
 
 	}
