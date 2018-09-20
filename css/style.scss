@@ -179,8 +179,11 @@ div.contact {
 			text-align: center;
 			color: #fff;
 			text-shadow: 0px 0px 10px #333;
+			p {
+				margin-bottom: 10px;
+			}
 			div.img {
-				margin-top: 20px;
+				// margin-bottom: 20px;
 				width: 2.6em;
 				height: 2.5em;
 				border: 1px solid #333; box-sizing: border-box;
