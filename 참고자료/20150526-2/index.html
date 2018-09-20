@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>2015. 05. 26 - title </title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: 1s all ease;
+        }
+        .box1 {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 페이지 시작 -->
+
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+
+    <!-- //페이지 끝 -->
+<!-- 자바스크립트 -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/common.js"></script>
+<script>
+  
+   $(".box").click(function(){
+       $(".box").css("width","50");
+       $(this).css("width","200");
+//        $(." + this + " .box1").css("display","block");
+   });
+    
+</script>
+<!-- //자바스크립트 -->
+</body>
+</html>

@@ -93,18 +93,23 @@ div.intro, {
 	background: url(../img/photo_01.jpg) no-repeat;
 	background-size: cover;
 	background-position: right;
-
 }
 // 인트로
 
 // 디데이카운터
 .countdown {
-	margin-top: 50vh;
+	margin-top: 60vh;
 	padding-left: 20px;
 	font-size: 8vw;
-	text-shadow: 0px 0px 5px #FFf;
+	text-shadow: 0px 0px 10px #FFf;
+	h2 {
+		font-size: 0.8em;
+	}
+	h3 {
+		margin: 4px 0 4px 0;
+	}
 	#clock {
-		border: 1px solid #333; box-sizing: border-box;
+		// border: 1px solid #333; box-sizing: border-box;
 		width: 68vw;
 		span {
 			font-size: 1.8em;
@@ -113,16 +118,47 @@ div.intro, {
 }
 // 디데이카운터
 
+// 신랑신부
+div.contact {
+	height: 100vh;
+	.box {
+		height: 100vh;
+		float: left;
+		// border: 1px solid #333; box-sizing: border-box;
+		width: 50%;
+		cursor: pointer;
+		transition: 1s all ease;
+	}
+	.groom {
+		background: url(../img/photo_02.jpg) no-repeat;
+	}
+	.bride {
+		background: url(../img/photo_03.jpg) no-repeat;
+	}
+	.groom, .bride {
+		background-size: cover;
+		background-position: center;
+	}
+}
+// 신랑신부
+
+
+
+
+
+
 // 더미 CSS
 
 p {
   line-height: 30px;
 }
 
-main section div {
-	// height: 800px;
-	// border: 1px solid #333; box-sizing: border-box;
+
+.contact2, .gallery, .guestbook, .place, .share {
+height: 300px;
+border: 1px solid #333; box-sizing: border-box;
 }
+
 #scrollValue {
 	position: fixed;
 	top: 20px;
