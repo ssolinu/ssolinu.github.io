@@ -87,7 +87,7 @@ body {
 div.intro, {
 	height: 100vh;
 	// border: 1px solid #333; box-sizing: border-box;
-	background: url(../img/photo_2.jpg) no-repeat;
+	background: url(../img/photo_01.jpg) no-repeat;
 	background-size: cover;
 	background-position: right;
 
@@ -100,6 +100,7 @@ div.intro, {
 	padding-left: 20px;
 	font-size: 8vw;
 	#clock {
+		border: 1px solid #333; box-sizing: border-box;
 		width: 60vw;
 		span {
 			font-size: 1.8em;
