@@ -35,11 +35,13 @@ $(function () {
       $("body").removeClass();
     }
 
+
+    $(".intro").css("background-size", (140-(value/15)) + "%");
+
     // 인트로 배경 이미지
     if (value >= 100) {
-      // alert("100" + (- value) + "px");
+      // alert((- value) + "px");
       // $(".intro").css("display", "none");
-      $(".intro").css("background-size", (- (percent * 10)) + "%");
       // $(".intro").css("background-position-y", (- value) + "px");
     }
 

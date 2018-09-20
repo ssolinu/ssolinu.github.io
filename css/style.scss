@@ -91,7 +91,7 @@ div.intro, {
 	height: 100vh;
 	// border: 1px solid #333; box-sizing: border-box;
 	background: url(../img/photo_01.jpg) no-repeat;
-	background-size: 150%;
+	background-size: 140%;
 	// background-position: center;
 }
 // 인트로
@@ -117,6 +117,12 @@ div.intro, {
 	}
 }
 // 디데이카운터
+
+// 요약
+div.summary {
+	padding: 20px;
+}
+// 요약
 
 // 신랑신부
 div.contact {
@@ -152,10 +158,6 @@ div.contact {
 // 신랑신부
 
 //갤러리
-
-// [class^="slide"] {
-// }
-
 div.gallery {
 	.item {
 		height: 100vh;

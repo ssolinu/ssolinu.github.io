@@ -95,7 +95,7 @@ body {
 div.intro {
   height: 100vh;
   background: url(../img/photo_01.jpg) no-repeat;
-  background-size: 150%;
+  background-size: 140%;
 }
 
 .countdown {
@@ -115,6 +115,10 @@ div.intro {
 }
 .countdown #clock span {
   font-size: 1.8em;
+}
+
+div.summary {
+  padding: 20px;
 }
 
 div.contact {
