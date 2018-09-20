@@ -12,6 +12,7 @@ $(function () {
     $(".percent_bar").css("left", percent + "%");
 
     $('#scrollValue').text(percent); // 스크롤값 체크용 더미
+    $('#scrollValue').text(value); // 스크롤값 체크용 더미
 
     // 전체 배경 색변경
     if (percent >= 20 && percent <= 40) {
@@ -35,7 +36,13 @@ $(function () {
     }
 
     // 인트로 배경 이미지
-    $(".intro").css("background-position", "0 " + (- value) + "px");
+    if (value >= 100) {
+      // alert("100" + (- value) + "px");
+      // $(".intro").css("display", "none");
+      $(".intro").css("background-size", (- (percent * 10)) + "%");
+      // $(".intro").css("background-position-y", (- value) + "px");
+    }
+
 
   });
 });
@@ -55,7 +62,20 @@ $('#clock').countdown('2018/11/10 16:00:00', function (event) {
 
 // 신랑신부 토글
 $(".box").click(function () {
-  $(".box").css("width", "20%");
-  $(this).css("width", "80%");
+  $(".box").removeClass("on");
+  $(".box").css("width", "25%");
+  $(this).css("width", "75%");
+  $(this).addClass("on");
 });
 // 신랑신부 토글
+
+// 갤러리 실행
+$(document).ready(function () {
+  $("#owl1").owlCarousel({
+    autoPlay: 5000, //Set AutoPlay to 5 seconds 
+    items: 1,
+  });
+});
+
+
+// 갤러리 실행

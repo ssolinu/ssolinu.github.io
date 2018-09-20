@@ -91,8 +91,8 @@ div.intro, {
 	height: 100vh;
 	// border: 1px solid #333; box-sizing: border-box;
 	background: url(../img/photo_01.jpg) no-repeat;
-	background-size: 100%;
-	background-position: right;
+	background-size: 150%;
+	// background-position: center;
 }
 // 인트로
 
@@ -138,10 +138,55 @@ div.contact {
 	.groom, .bride {
 		background-size: cover;
 		background-position: center;
+		&.on {
+			.tel {
+				opacity: 1;
+				transition: 2s all ease;
+			}
+		}
+		.tel {
+			opacity: 0;
+		}
 	}
 }
 // 신랑신부
 
+//갤러리
+
+// [class^="slide"] {
+// }
+
+div.gallery {
+	.item {
+		height: 100vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
+	.slide_01 {
+		background-image: url(../img/slide_01.jpg);
+	}
+	.slide_02 {
+		background-image: url(../img/slide_02.jpg);
+	}
+	.slide_03 {
+		background-image: url(../img/slide_03.jpg);
+	}
+	.slide_04 {
+		background-image: url(../img/slide_04.jpg);
+	}
+	.slide_05 {
+		background-image: url(../img/slide_05.jpg);
+	}
+	.slide_06 {
+		background-image: url(../img/slide_06.jpg);
+	}
+	.slide_07 {
+		background-image: url(../img/slide_07.jpg);
+	}
+}
+//갤러리
 
 
 
@@ -154,7 +199,7 @@ p {
 }
 
 
-.contact2, .gallery, .guestbook, .place, .share {
+.contact2, .guestbook, .place, .share {
 height: 300px;
 border: 1px solid #333; box-sizing: border-box;
 }

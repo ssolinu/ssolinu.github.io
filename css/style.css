@@ -95,8 +95,7 @@ body {
 div.intro {
   height: 100vh;
   background: url(../img/photo_01.jpg) no-repeat;
-  background-size: 100%;
-  background-position: right;
+  background-size: 150%;
 }
 
 .countdown {
@@ -138,12 +137,47 @@ div.contact .groom, div.contact .bride {
   background-size: cover;
   background-position: center;
 }
+div.contact .groom.on .tel, div.contact .bride.on .tel {
+  opacity: 1;
+  transition: 2s all ease;
+}
+div.contact .groom .tel, div.contact .bride .tel {
+  opacity: 0;
+}
+
+div.gallery .item {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.gallery .slide_01 {
+  background-image: url(../img/slide_01.jpg);
+}
+div.gallery .slide_02 {
+  background-image: url(../img/slide_02.jpg);
+}
+div.gallery .slide_03 {
+  background-image: url(../img/slide_03.jpg);
+}
+div.gallery .slide_04 {
+  background-image: url(../img/slide_04.jpg);
+}
+div.gallery .slide_05 {
+  background-image: url(../img/slide_05.jpg);
+}
+div.gallery .slide_06 {
+  background-image: url(../img/slide_06.jpg);
+}
+div.gallery .slide_07 {
+  background-image: url(../img/slide_07.jpg);
+}
 
 p {
   line-height: 30px;
 }
 
-.contact2, .gallery, .guestbook, .place, .share {
+.contact2, .guestbook, .place, .share {
   height: 300px;
   border: 1px solid #333;
   box-sizing: border-box;
