@@ -66,7 +66,10 @@ a, a:hover, a:active {
 
 // 배경색 지정
 body {
-    transition: 1s all ease;
+		transition: 1s all ease;
+		font-size: 8vw;
+		color: #333;
+		
 }
 .bg_01 {
 	background-color: #EEFFF3;
@@ -89,10 +92,9 @@ body {
 // 인트로
 div.intro, {
 	height: 100vh;
-	// border: 1px solid #333; box-sizing: border-box;
 	background: url(../img/photo_01.jpg) no-repeat;
 	background-size: 140%;
-	// background-position: center;
+	background-position: center left;
 }
 // 인트로
 
@@ -100,7 +102,6 @@ div.intro, {
 .countdown {
 	margin-top: 60vh;
 	padding-left: 20px;
-	font-size: 8vw;
 	text-shadow: 0px 0px 10px #FFf;
 	h2 {
 		font-size: 0.8em;
@@ -109,7 +110,6 @@ div.intro, {
 		margin: 4px 0 4px 0;
 	}
 	#clock {
-		// border: 1px solid #333; box-sizing: border-box;
 		width: 68vw;
 		span {
 			font-size: 1.8em;
@@ -120,7 +120,12 @@ div.intro, {
 
 // 요약
 div.summary {
-	padding: 20px;
+	margin: 5em 1.2em;
+	padding: 1.2em;
+	border: 0.5em solid #F3D9ED; box-sizing: border-box;
+	font-size: 0.6em;	
+	border-radius: 0 20px 0 0 / 0 20px 0 0 ;
+
 }
 // 요약
 
@@ -130,7 +135,6 @@ div.contact {
 	.box {
 		height: 100vh;
 		float: left;
-		// border: 1px solid #333; box-sizing: border-box;
 		width: 50%;
 		cursor: pointer;
 		transition: 1s all ease;
@@ -144,6 +148,20 @@ div.contact {
 	.groom, .bride {
 		background-size: cover;
 		background-position: center;
+		.title {
+			width: 3em;
+			text-align: center;
+			line-height: 0.5em;
+			font-size: 0.8em;
+			margin: 0 auto;
+			margin-top: 1em;
+			padding: 0.5em;
+			border: 1px solid #F3D9ED; box-sizing: border-box;
+			background-color: rgba(235, 219, 235, 0.5);
+			border-radius: 0 20px 0 0 / 0 20px 0 0 ;
+		}
+
+
 		&.on {
 			.tel {
 				opacity: 1;
@@ -153,6 +171,7 @@ div.contact {
 		.tel {
 			opacity: 0;
 		}
+
 	}
 }
 // 신랑신부

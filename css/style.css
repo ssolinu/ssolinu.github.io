@@ -70,6 +70,8 @@ a, a:hover, a:active {
 
 body {
   transition: 1s all ease;
+  font-size: 8vw;
+  color: #333;
 }
 
 .bg_01 {
@@ -96,12 +98,12 @@ div.intro {
   height: 100vh;
   background: url(../img/photo_01.jpg) no-repeat;
   background-size: 140%;
+  background-position: center left;
 }
 
 .countdown {
   margin-top: 60vh;
   padding-left: 20px;
-  font-size: 8vw;
   text-shadow: 0px 0px 10px #FFf;
 }
 .countdown h2 {
@@ -118,7 +120,12 @@ div.intro {
 }
 
 div.summary {
-  padding: 20px;
+  margin: 5em 1.2em;
+  padding: 1.2em;
+  border: 0.5em solid #F3D9ED;
+  box-sizing: border-box;
+  font-size: 0.6em;
+  border-radius: 0 20px 0 0/0 20px 0 0;
 }
 
 div.contact {
@@ -140,6 +147,19 @@ div.contact .bride {
 div.contact .groom, div.contact .bride {
   background-size: cover;
   background-position: center;
+}
+div.contact .groom .title, div.contact .bride .title {
+  width: 3em;
+  text-align: center;
+  line-height: 0.5em;
+  font-size: 0.8em;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: 0.5em;
+  border: 1px solid #F3D9ED;
+  box-sizing: border-box;
+  background-color: rgba(235, 219, 235, 0.5);
+  border-radius: 0 20px 0 0/0 20px 0 0;
 }
 div.contact .groom.on .tel, div.contact .bride.on .tel {
   opacity: 1;

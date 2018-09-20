@@ -12,39 +12,35 @@ $(function () {
     $(".percent_bar").css("left", percent + "%");
 
     $('#scrollValue').text(percent); // 스크롤값 체크용 더미
-    $('#scrollValue').text(value); // 스크롤값 체크용 더미
+    // $('#scrollValue').text(value); // 스크롤값 체크용 더미
 
     // 전체 배경 색변경
-    if (percent >= 20 && percent <= 40) {
+    if (percent >= 10 && percent <= 30) {
       $("body").removeClass();
       $("body").addClass("bg_01");
     }
-    else if (percent >= 40 && percent <= 60) {
+    else if (percent >= 30 && percent <= 45) {
       $("body").removeClass();
       $("body").addClass("bg_02");
     }
-    else if (percent >= 60 && percent <= 80) {
+    else if (percent >= 45 && percent <= 60) {
       $("body").removeClass();
       $("body").addClass("bg_03");
     }
-    else if (percent >= 80 && percent <= 100) {
+    else if (percent >= 60 && percent <= 75) {
       $("body").removeClass();
       $("body").addClass("bg_04");
+    }
+    else if (percent >= 75 && percent <= 100) {
+      $("body").removeClass();
+      $("body").addClass("bg_05");
     }
     else {
       $("body").removeClass();
     }
 
-
-    $(".intro").css("background-size", (140-(value/15)) + "%");
-
-    // 인트로 배경 이미지
-    if (value >= 100) {
-      // alert((- value) + "px");
-      // $(".intro").css("display", "none");
-      // $(".intro").css("background-position-y", (- value) + "px");
-    }
-
+    // 인트로 배경 이동
+    $(".intro").css("background-size", (140-(value/40)) + "%");
 
   });
 });
