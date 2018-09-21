@@ -100,8 +100,12 @@ div.intro, {
 
 // 디데이카운터
 .countdown {
-	margin-top: 60vh;
-	padding-left: 20px;
+	position: absolute;
+	left: 1em;
+	bottom: 2em;
+	// border: 1px solid #333; box-sizing: border-box;
+	// margin-top: 60vh;
+	// padding-left: 20px;
 	text-shadow: 0px 0px 10px #FFf;
 	h2 {
 		font-size: 0.8em;
