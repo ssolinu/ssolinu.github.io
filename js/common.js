@@ -69,13 +69,28 @@ $(".box").click(function () {
 });
 // 신랑신부 토글
 
-// 갤러리 실행
-$(document).ready(function () {
-  $("#owl1").owlCarousel({
-    autoPlay: 5000, //Set AutoPlay to 5 seconds 
-    items: 1,
-  });
-});
 
+
+$(document).ready(function () {
+
+  // 원페이지 플러그인 실행
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    // responsiveFallback: 600,
+    loop: false
+  });
+
+// 갤러리 실행
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true
+  });
+
+
+
+});
 
 // 갤러리 실행
