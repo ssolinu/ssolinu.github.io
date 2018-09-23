@@ -43,182 +43,146 @@ a, a:hover, a:active {
 }
 /* 리셋 기본 css */
 
-// 상단 탑 세로 길이 지침 영역 
-.top_page {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: #6c9cf5;
-    height: 5px;
-    transition: 0.3s all ease;
-}
-.top_page div.percent_bar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right:0;
-    background: #efefef;
-    height: 5px;
-    transition: 0.3s all ease;
-}
-// 상단 탑 세로 길이 지침 영역 
-
-// 배경색 지정
+// 기본 설정
 body {
 		transition: 1s all ease;
-		font-size: 8vw;
+		font-size: 3vh;
 		color: #333;
-		
-}
-.bg_01 {
-	background-color: #EEFFF3;
-}
-.bg_02 {
-	background-color: #FFFFF2;
-}
-.bg_03 {
-	background-color: #FFF2F0;
-}
-.bg_04 {
-	background-color: #ECF9FF;
-}
-.bg_05 {
-	background-color: #F9F1FF;
-}
-
-// 배경색 지정
+		main {
+			section {
+				height: 100vh;
+				.title {
+					// 페이지별 타이틀 기본
+					border: 1px solid #333; box-sizing: border-box;
+					background: #efefef;
+					height: 5vh;
+				}
+				.contents {
+					// 컨텐츠 기본
+					height: 95vh;
+					border: 1px solid #333; box-sizing: border-box;
+				}
+			} // section
+		} //main
+} //body
+// 기본 설정
 
 // 인트로
 div.intro, {
 	height: 100vh;
 	background: url(../img/photo_01.jpg) no-repeat;
 	background-size: 140%;
-	background-position: center left;
+	background-position: center;
 }
 // 인트로
 
 // 디데이카운터
 .countdown {
 	position: absolute;
-	left: 1em;
-	bottom: 2em;
-	// border: 1px solid #333; box-sizing: border-box;
-	// margin-top: 60vh;
-	// padding-left: 20px;
+	left: 1.5em;
+	bottom: 4.5em;
 	text-shadow: 0px 0px 10px #FFf;
 	h2 {
-		font-size: 0.8em;
+		font-size: 1.4em;
 	}
 	h3 {
+		font-size: 1em;
 		margin: 4px 0 4px 0;
 	}
 	#clock {
-		width: 68vw;
+		// width: 68vw;
 		span {
-			font-size: 1.8em;
+			font-size: 1.6em;
 		}
 	}
 }
 // 디데이카운터
 
-// 요약
-div.summary {
-	margin: 5em 1.2em;
-	padding: 1.2em;
-	border: 0.5em solid #F3D9ED; box-sizing: border-box;
-	font-size: 0.6em;	
-	border-radius: 0 20px 0 0 / 0 20px 0 0 ;
-
+// 신랑신부 혼주 소개 높이 체크
+.contact_1 {
+	//신랑신부소개 높이
+	height: 75vh;
 }
-// 요약
+.contact_2 {
+	//혼주소개 높이
+	height: 20vh;
+}
+// 신랑신부 혼주 소개 높이 체크
 
-// 신랑신부
-div.contact {
-	height: 100vh;
-	font-size: 0.8em;
-
-	.box {
-		height: 100vh;
-		float: left;
-		width: 50%;
-		cursor: pointer;
-		transition: 1s all ease;
+// 신랑신부소개
+.box {
+	height: 100%;
+	float: left;
+	width: 50%;
+	cursor: pointer;
+	transition: 1s all ease;
+	overflow: hidden;
+}
+.groom {
+	background: url(../img/photo_02.jpg) no-repeat;
+}
+.bride {
+	background: url(../img/photo_03.jpg) no-repeat;
+}
+.groom, .bride {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	.title {
+		width: 3em;
+		text-align: center;
+		line-height: 0.5em;
+		margin: 0 auto;
+		margin-top: 1em;
+		padding: 0.5em;
+		border: 1px solid #F3D9ED; box-sizing: border-box;
+		background-color: rgba(235, 219, 235, 0.5);
+		border-radius: 0 20px 0 0 / 0 20px 0 0 ;
 	}
-	.groom {
-		background: url(../img/photo_02.jpg) no-repeat;
-	}
-	.bride {
-		background: url(../img/photo_03.jpg) no-repeat;
-	}
-	.groom, .bride {
-		background-size: cover;
-		background-position: center;
-		position: relative;
-		.title {
-			width: 3em;
-			text-align: center;
-			line-height: 0.5em;
-			margin: 0 auto;
-			margin-top: 1em;
-			padding: 0.5em;
-			border: 1px solid #F3D9ED; box-sizing: border-box;
-			background-color: rgba(235, 219, 235, 0.5);
-			border-radius: 0 20px 0 0 / 0 20px 0 0 ;
-		}
-
-
-		&.on {
-			.tel {
-				bottom: 50px;
-				opacity: 1;
-				transition: 1s all ease;
-				// 에니메이션을 이용해서 순서대로 처리 하도록 하자
-			}
-		}
+	&.on {
 		.tel {
-			
-			position: absolute;
-			bottom: -100%;
-			width: 100%;
-			// bottom: 50px;
-			opacity: 0;
-			font-size: 0.9em;
-			text-align: center;
-			color: #fff;
-			text-shadow: 0px 0px 10px #333;
-			p {
-				margin-bottom: 10px;
-			}
-			div.img {
-				// margin-bottom: 20px;
-				width: 2.6em;
-				height: 2.5em;
-				border: 1px solid #333; box-sizing: border-box;
-				border-radius: 50%;
-				padding: 10px;
-				margin: 0 auto;
-				background-color: rgba(255, 255, 255, 0.9);
-				img {
-					// width: 70%;
-					height: 100%;
-					margin-left: 10%;
-				}
+			bottom: 50px;
+			opacity: 1;
+			transition: 1s all ease;
+			// 에니메이션을 이용해서 순서대로 처리 하도록 하자
+		}
+	}
+	.tel {
+		position: absolute;
+		bottom: -100%;
+		width: 100%;
+		opacity: 0;
+		font-size: 0.9em;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0px 0px 10px #333;
+		p {
+			margin-bottom: 10px;
+		}
+		div.img {
+			width: 2.6em;
+			height: 2.5em;
+			border: 1px solid #333; box-sizing: border-box;
+			border-radius: 50%;
+			padding: 10px;
+			margin: 0 auto;
+			background-color: rgba(255, 255, 255, 0.9);
+			img {
+				height: 100%;
+				margin-left: 10%;
 			}
 		}
-
 	}
 }
-// 신랑신부
+// 신랑신부소개
 
-//갤러리
-div.gallery {
-	.item {
-		height: 100vh;
+// 갤러리 
+.owl-carousel {
+	div.item {
+		height: 95vh;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-
 	}
 	.slide_01 {
 		background-image: url(../img/slide_01.jpg);
@@ -241,30 +205,15 @@ div.gallery {
 	.slide_07 {
 		background-image: url(../img/slide_07.jpg);
 	}
-}
-//갤러리
-
-
+} //.owl-carousel
+// 갤러리 
 
 
 
 // 더미 CSS
 
-p {
-  line-height: 30px;
-}
 
 
-.contact2, .guestbook, .place, .share {
-height: 300px;
-border: 1px solid #333; box-sizing: border-box;
-}
-
-#scrollValue {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-}
 //  더미 CSS
 
 

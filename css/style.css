@@ -48,110 +48,81 @@ a, a:hover, a:active {
 }
 
 /* 리셋 기본 css */
-.top_page {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: #6c9cf5;
-  height: 5px;
-  transition: 0.3s all ease;
-}
-
-.top_page div.percent_bar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  background: #efefef;
-  height: 5px;
-  transition: 0.3s all ease;
-}
-
 body {
   transition: 1s all ease;
-  font-size: 8vw;
+  font-size: 3vh;
   color: #333;
 }
-
-.bg_01 {
-  background-color: #EEFFF3;
+body main section {
+  height: 100vh;
 }
-
-.bg_02 {
-  background-color: #FFFFF2;
+body main section .title {
+  border: 1px solid #333;
+  box-sizing: border-box;
+  background: #efefef;
+  height: 5vh;
 }
-
-.bg_03 {
-  background-color: #FFF2F0;
-}
-
-.bg_04 {
-  background-color: #ECF9FF;
-}
-
-.bg_05 {
-  background-color: #F9F1FF;
+body main section .contents {
+  height: 95vh;
+  border: 1px solid #333;
+  box-sizing: border-box;
 }
 
 div.intro {
   height: 100vh;
   background: url(../img/photo_01.jpg) no-repeat;
   background-size: 140%;
-  background-position: center left;
+  background-position: center;
 }
 
 .countdown {
   position: absolute;
-  left: 1em;
-  bottom: 2em;
+  left: 1.5em;
+  bottom: 4.5em;
   text-shadow: 0px 0px 10px #FFf;
 }
 .countdown h2 {
-  font-size: 0.8em;
+  font-size: 1.4em;
 }
 .countdown h3 {
+  font-size: 1em;
   margin: 4px 0 4px 0;
 }
-.countdown #clock {
-  width: 68vw;
-}
 .countdown #clock span {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
-div.summary {
-  margin: 5em 1.2em;
-  padding: 1.2em;
-  border: 0.5em solid #F3D9ED;
-  box-sizing: border-box;
-  font-size: 0.6em;
-  border-radius: 0 20px 0 0/0 20px 0 0;
+.contact_1 {
+  height: 75vh;
 }
 
-div.contact {
-  height: 100vh;
-  font-size: 0.8em;
+.contact_2 {
+  height: 20vh;
 }
-div.contact .box {
-  height: 100vh;
+
+.box {
+  height: 100%;
   float: left;
   width: 50%;
   cursor: pointer;
   transition: 1s all ease;
+  overflow: hidden;
 }
-div.contact .groom {
+
+.groom {
   background: url(../img/photo_02.jpg) no-repeat;
 }
-div.contact .bride {
+
+.bride {
   background: url(../img/photo_03.jpg) no-repeat;
 }
-div.contact .groom, div.contact .bride {
+
+.groom, .bride {
   background-size: cover;
   background-position: center;
   position: relative;
 }
-div.contact .groom .title, div.contact .bride .title {
+.groom .title, .bride .title {
   width: 3em;
   text-align: center;
   line-height: 0.5em;
@@ -163,12 +134,12 @@ div.contact .groom .title, div.contact .bride .title {
   background-color: rgba(235, 219, 235, 0.5);
   border-radius: 0 20px 0 0/0 20px 0 0;
 }
-div.contact .groom.on .tel, div.contact .bride.on .tel {
+.groom.on .tel, .bride.on .tel {
   bottom: 50px;
   opacity: 1;
   transition: 1s all ease;
 }
-div.contact .groom .tel, div.contact .bride .tel {
+.groom .tel, .bride .tel {
   position: absolute;
   bottom: -100%;
   width: 100%;
@@ -178,10 +149,10 @@ div.contact .groom .tel, div.contact .bride .tel {
   color: #fff;
   text-shadow: 0px 0px 10px #333;
 }
-div.contact .groom .tel p, div.contact .bride .tel p {
+.groom .tel p, .bride .tel p {
   margin-bottom: 10px;
 }
-div.contact .groom .tel div.img, div.contact .bride .tel div.img {
+.groom .tel div.img, .bride .tel div.img {
   width: 2.6em;
   height: 2.5em;
   border: 1px solid #333;
@@ -191,51 +162,35 @@ div.contact .groom .tel div.img, div.contact .bride .tel div.img {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.9);
 }
-div.contact .groom .tel div.img img, div.contact .bride .tel div.img img {
+.groom .tel div.img img, .bride .tel div.img img {
   height: 100%;
   margin-left: 10%;
 }
 
-div.gallery .item {
-  height: 100vh;
+.owl-carousel div.item {
+  height: 95vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-div.gallery .slide_01 {
+.owl-carousel .slide_01 {
   background-image: url(../img/slide_01.jpg);
 }
-div.gallery .slide_02 {
+.owl-carousel .slide_02 {
   background-image: url(../img/slide_02.jpg);
 }
-div.gallery .slide_03 {
+.owl-carousel .slide_03 {
   background-image: url(../img/slide_03.jpg);
 }
-div.gallery .slide_04 {
+.owl-carousel .slide_04 {
   background-image: url(../img/slide_04.jpg);
 }
-div.gallery .slide_05 {
+.owl-carousel .slide_05 {
   background-image: url(../img/slide_05.jpg);
 }
-div.gallery .slide_06 {
+.owl-carousel .slide_06 {
   background-image: url(../img/slide_06.jpg);
 }
-div.gallery .slide_07 {
+.owl-carousel .slide_07 {
   background-image: url(../img/slide_07.jpg);
-}
-
-p {
-  line-height: 30px;
-}
-
-.contact2, .guestbook, .place, .share {
-  height: 300px;
-  border: 1px solid #333;
-  box-sizing: border-box;
-}
-
-#scrollValue {
-  position: fixed;
-  top: 20px;
-  right: 20px;
 }
