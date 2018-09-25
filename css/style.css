@@ -74,7 +74,38 @@ div.intro {
   background-size: 140%;
   background-position: center;
 }
+div.intro .finger {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 1.5em;
+  opacity: 0;
+  animation: finger_slide 3s ease infinite;
+}
+div.intro .finger img {
+  width: 100%;
+}
 
+@keyframes finger_slide {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+  30% {
+    opacity: 0.7;
+    bottom: 0.7em;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0.7;
+    bottom: 1.3em;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+}
 .countdown {
   position: absolute;
   left: 1.5em;
