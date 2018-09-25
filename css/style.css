@@ -167,6 +167,38 @@ div.intro {
   margin-left: 10%;
 }
 
+.contact_2 .parent {
+  margin-top: 0.5em;
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+.contact_2 .parent h3 {
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+.contact_2 .parent .info {
+  font-size: 0.7em;
+  margin: 0.8em 0;
+}
+.contact_2 .parent .info p {
+  font-size: 0.8em;
+  display: inline;
+}
+.contact_2 .parent .info p.name {
+  display: inline-block;
+  width: 22vw;
+  font-size: 1.4rem;
+}
+.contact_2 .parent .info a {
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0 0.4em;
+  background: #3D4882;
+  color: #efefef;
+}
+
 .owl-carousel div.item {
   height: 95vh;
   background-position: center;

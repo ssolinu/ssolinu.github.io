@@ -176,6 +176,46 @@ div.intro, {
 }
 // 신랑신부소개
 
+// 혼주소개
+.contact_2 {
+	.parent {
+		margin-top: 0.5em;
+		float: left;
+		text-align: center;
+		width: 50%;
+		h3 {
+			padding: 0.5em;
+			font-size: 0.8em;
+		}
+		.info {
+			font-size: 0.7em;
+			margin: 0.8em 0;
+			p {
+				font-size: 0.8em;
+				display: inline;
+				&.name {
+					display: inline-block;
+					// border: 1px solid #333; box-sizing: border-box;
+					width: 22vw;
+					font-size: 1.4rem;
+					&.deceased {
+						// font-size: 1rem;
+					}
+				}
+			}
+			a {
+				border: 1px solid #333; box-sizing: border-box;
+				border-radius: 5px;
+				padding: 0 0.4em;
+				background: #3D4882;
+				color: #efefef;
+				
+			}
+		}
+	}
+}
+// 혼주소개
+
 // 갤러리 
 .owl-carousel {
 	div.item {
