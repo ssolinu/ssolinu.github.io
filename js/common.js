@@ -14,6 +14,7 @@ $('#clock').countdown('2018/11/10 16:00:00', function (event) {
 $(".box").click(function () {
   $(".box").removeClass("on");
   $(".box").css("width", "25%");
+  $(".box .finger").css("display","none");
   $(this).css("width", "75%");
   $(this).addClass("on");
 });
