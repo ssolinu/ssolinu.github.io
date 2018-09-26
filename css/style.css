@@ -318,6 +318,10 @@ div.intro .finger img {
   background-image: url(../img/slide_07.jpg);
 }
 
+.map img {
+  width: 100vw;
+}
+
 .mpp_landscape {
   display: none;
 }
