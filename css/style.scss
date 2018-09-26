@@ -53,14 +53,14 @@ body {
 				height: 100vh;
 				.title {
 					// 페이지별 타이틀 기본
-					border: 1px solid #333; box-sizing: border-box;
-					background: #efefef;
+					// border: 1px solid #333; box-sizing: border-box;
+					// background: #efefef;
 					height: 5vh;
 				}
 				.contents {
 					// 컨텐츠 기본
 					height: 95vh;
-					border: 1px solid #333; box-sizing: border-box;
+					// border: 1px solid #333; box-sizing: border-box;
 				}
 			} // section
 		} //main
@@ -137,11 +137,11 @@ div.intro, {
 // 신랑신부 혼주 소개 높이 체크
 .contact_1 {
 	//신랑신부소개 높이
-	height: 75vh;
+	height: 76vh;
 }
 .contact_2 {
 	//혼주소개 높이
-	height: 20vh;
+	height: 19vh;
 }
 // 신랑신부 혼주 소개 높이 체크
 
@@ -156,21 +156,42 @@ div.intro, {
 }
 .groom {
 	background: url(../img/photo_02.jpg) no-repeat;
+	.semicircle {
+		right: -5vh;
+		border-radius: 10vh 0 0 10vh; 
+		text-align: left;
+	}
 }
 .bride {
 	background: url(../img/photo_03.jpg) no-repeat;
+	border-left: 1px solid #666; box-sizing: border-box;
+	.semicircle {
+		left: -5vh;
+		border-radius: 0 10vh 10vh 0; 
+		text-align: right;
+	}
 }
 .groom, .bride {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	text-align: center;
+	.semicircle {
+		width: 10vh;
+		height: 10vh;
+		line-height: 10vh;
+		position: absolute;
+		top: 30vh;
+		font-size: 0.6em;
+		color: #efefef;
+		background: RGBA(64, 74, 122, 0.6);
+		overflow: hidden;
+
+
+	}
 	.contents_title {
-		// width: 3em;
 		transition: 1s all ease;
-		display: inline-block;
-		text-align: center;
 		line-height: 1em;
+		text-align: center;
 		margin: 0 auto;
 		margin-top: 1em;
 		padding: 0.5em;
@@ -202,11 +223,10 @@ div.intro, {
 		div.img {
 			width: 2.6em;
 			height: 2.5em;
-			border: 1px solid #333; box-sizing: border-box;
 			border-radius: 50%;
 			padding: 10px;
 			margin: 0 auto;
-			background-color: rgba(255, 255, 255, 0.9);
+			background-color: rgba(255, 255, 255, 0.8);
 			img {
 				height: 100%;
 				margin-left: 10%;
@@ -218,10 +238,10 @@ div.intro, {
 
 // 혼주소개
 .contact_2 {
+	font-size: 4vw;
 	.parent {
 		margin-top: 0.5em;
 		float: left;
-		// text-align: center;
 		width: 50%;
 		h3 {
 			padding: 0.5em;
@@ -231,12 +251,12 @@ div.intro, {
 		.info {
 			font-size: 0.7em;
 			margin: 0.8em;
-			// border: 1px solid #333; box-sizing: border-box;
 			p {
 				font-size: 0.8em;
 				display: inline;
 				&.name {
 					display: inline-block;
+					vertical-align: middle;
 					width: 18vw;
 					font-size: 1.5em;
 					text-align: center;
@@ -246,6 +266,7 @@ div.intro, {
 				}
 			}
 			a {
+				vertical-align: middle;
 				border: 1px solid #333; box-sizing: border-box;
 				border-radius: 5px;
 				padding: 0 0.4em;
@@ -299,7 +320,142 @@ div.intro, {
 //  더미 CSS
 
 
-
+// 가로막기 CSS
+.mpp_landscape {
+	display: none
+}
+@media screen and (orientation:landscape){
+	.mpp_landscape {
+			position: fixed;
+			display: block;
+			z-index: 100;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: #666 
+	}
+	.mpp_landscape_box {
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			border: 2px solid #efefef;
+			border-radius: 8px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			-webkit-animation: mpp_landscape_anibox 1.5s infinite;
+			animation: mpp_landscape_anibox 1.5s infinite
+	}
+	.mpp_landscape_box::before {
+			content: '';
+			position: absolute;
+			display: bloc;
+			width: 76px;
+			height: 50px;
+			border: 2px solid #efefef;
+			top: -2px;
+			left: 9px
+	}
+	// .mpp_landscape_box::after {
+	// 		color: #efefef;
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 15px
+	// }
+	.mpp_landscape_box2 {
+			position: absolute;
+			width: 7px;
+			height: 7px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			right: 1px;
+			top: 20px
+	}
+	.mpp_landscape_text {
+			position: absolute;
+			width: 190px;
+			height: 0;
+			top: 130px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			color: #FFF;
+			text-align: center
+	}
+	@-webkit-keyframes mpp_landscape_anibox{
+			0% {
+					-webkit-transform: rotate(0);
+					opacity: 0
+			}
+			20% {
+					-webkit-transform: rotate(0);
+					opacity: 1
+			}
+			65% {
+					-webkit-transform: rotate(100deg);
+					opacity: 1
+			}
+			80% {
+					-webkit-transform: rotate(80deg);
+					opacity: 1
+			}
+			85% {
+					-webkit-transform: rotate(95deg);
+					opacity: 1
+			}
+			90% {
+					-webkit-transform: rotate(85deg);
+					opacity: 1
+			}
+			95% {
+					-webkit-transform: rotate(90deg);
+					opacity: 1
+			}
+			100% {
+					-webkit-transform: rotate(90deg);
+					opacity: 0
+			}
+	}
+	@keyframes mpp_landscape_anibox{
+			0% {
+					transform: rotate(0);
+					opacity: 0
+			}
+			20% {
+					transform: rotate(0);
+					opacity: 1
+			}
+			65% {
+					transform: rotate(100deg);
+					opacity: 1
+			}
+			80% {
+					transform: rotate(80deg);
+					opacity: 1
+			}
+			85% {
+					transform: rotate(95deg);
+					opacity: 1
+			}
+			90% {
+					transform: rotate(85deg);
+					opacity: 1
+			}
+			95% {
+					transform: rotate(90deg);
+					opacity: 1
+			}
+			100% {
+					transform: rotate(90deg);
+					opacity: 0
+			}
+	}
+}
+// 가로막기 CSS
 
 
 
