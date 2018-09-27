@@ -307,6 +307,8 @@ div.intro, {
 		}
 	}
 }
+// 혼주소개
+
 // 혼주소개 미디어쿼리
 @media screen and (device-aspect-ratio: 3/4), screen and (device-aspect-ratio: 10/16) {
 .contact_2 {
@@ -314,8 +316,6 @@ div.intro, {
 }
 }
 // 혼주소개 미디어쿼리
-
-// 혼주소개
 
 // 갤러리 
 .owl-carousel {
@@ -351,8 +351,36 @@ div.intro, {
 
 // 오시는길
 .map {
+	text-align: center;
 	img {
 		width: 100vw;
+		max-width: 600px;
+
+	}
+	p {
+		float: right;
+		border: 1px solid #629C46; box-sizing: border-box;
+		background: #75B45A;
+		color: #efefef;
+		font-size: 0.5em;
+		margin-right: 2vw;
+		padding: 3vw;
+	}
+}
+// 오시는길
+.location {
+	font-size: 0.75em;
+	.location_text {
+		position: absolute;
+		bottom: 10vh;
+		margin: 3vw 10vw;
+		p {
+			padding-top: 1vh;
+			&.bold {
+				font-weight: bold;
+				padding-top: 2vh;
+			}
+		}
 	}
 }
 // 오시는길

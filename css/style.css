@@ -317,8 +317,38 @@ div.intro .finger img {
   background-image: url(../img/slide_07.jpg);
 }
 
+.map {
+  text-align: center;
+}
 .map img {
   width: 100vw;
+  max-width: 600px;
+}
+.map p {
+  float: right;
+  border: 1px solid #629C46;
+  box-sizing: border-box;
+  background: #75B45A;
+  color: #efefef;
+  font-size: 0.5em;
+  margin-right: 2vw;
+  padding: 3vw;
+}
+
+.location {
+  font-size: 0.75em;
+}
+.location .location_text {
+  position: absolute;
+  bottom: 10vh;
+  margin: 3vw 10vw;
+}
+.location .location_text p {
+  padding-top: 1vh;
+}
+.location .location_text p.bold {
+  font-weight: bold;
+  padding-top: 2vh;
 }
 
 .mpp_landscape {

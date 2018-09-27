@@ -27,7 +27,10 @@ $(document).ready(function () {
 // 원페이지 플러그인 실행
 $(".main").onepage_scroll({
   sectionContainer: "section",
-  // responsiveFallback: 600,
+  easing: "ease-out",
+  animationTime: 100,
+  pagination: false,
+  keyboard: true,
   loop: false
 });
 // 원페이지 플러그인 실행
