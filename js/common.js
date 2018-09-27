@@ -28,7 +28,7 @@ $(document).ready(function () {
 $(".main").onepage_scroll({
   sectionContainer: "section",
   easing: "ease-out",
-  animationTime: 100,
+  animationTime: 1000,
   pagination: false,
   keyboard: true,
   loop: false
