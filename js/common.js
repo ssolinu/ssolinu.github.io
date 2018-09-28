@@ -24,16 +24,24 @@ $(".box").click(function () {
 // 기본 자동 실행 코드 
 $(document).ready(function () {
 
-// 원페이지 플러그인 실행
-$(".main").onepage_scroll({
-  sectionContainer: "section",
-  easing: "ease-out",
-  animationTime: 1000,
-  pagination: false,
-  keyboard: true,
-  loop: false
-});
-// 원페이지 플러그인 실행
+
+//PC검출 적용
+var w = document.body.clientWidth;
+if (w < 1025) {
+  // 원페이지 플러그인 실행
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    easing: "ease-out",
+    animationTime: 1000,
+    pagination: false,
+    keyboard: true,
+    loop: false
+  });
+  // 원페이지 플러그인 실행
+}
+//PC검출 적용
+
+
 // 갤러리 실행
 $(".owl-carousel").owlCarousel({
   items: 1,
@@ -48,3 +56,12 @@ $(".owl-carousel").owlCarousel({
 
 });
 // 기본 자동 실행 코드 
+
+window.onresize = resize;
+function resize() {
+  var w = document.body.clientWidth;
+  if (w > 767) {
+    location.href = 'index.html';
+  }
+} 
+

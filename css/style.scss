@@ -49,6 +49,9 @@ body {
 		font-size: 3vh;
 		color: #333;
 		main {
+			.qr_code {
+				display: none;
+			}
 			section {
 				height: 100vh;
 				.title {
@@ -66,6 +69,39 @@ body {
 		} //main
 } //body
 // 기본 설정
+
+// PC 모드
+@media screen and (min-width: 1025px) {
+	body {
+		.main {
+			section {
+				&.intro_row {
+					display: block;
+				}
+				display: none;
+				.intro {
+					display: block;
+					.qr_code {
+						position: absolute;
+						top: 200px;
+						right: 50px;
+						display: block;
+						text-align: center;
+						p {
+							margin: 10px;
+							text-shadow: 0px 0px 10px #FFf;
+						}
+					}
+					.finger {
+						display: none;
+					}
+				}
+			}
+			
+		}
+	}
+}
+// PC 모드
 
 // 인트로
 div.intro, {
@@ -399,7 +435,7 @@ div.intro, {
 .mpp_landscape {
 	display: none
 }
-@media screen and (orientation:landscape){
+@media screen and (max-width: 1024px) and (orientation:landscape) {
 	.mpp_landscape {
 			position: fixed;
 			display: block;
