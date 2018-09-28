@@ -39,7 +39,7 @@ $(".owl-carousel").owlCarousel({
   items: 1,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 10000,
   autoplayHoverPause: true
 });
 // 갤러리 실행
