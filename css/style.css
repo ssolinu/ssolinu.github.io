@@ -1,67 +1,599 @@
-/*
-Error: Invalid CSS after "출처:": expected pseudoclass or pseudoelement, was " https://hunit...."
-        on line 94 of style.scss
+@charset "UTF-8";
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+/* 리셋 기본 css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-89: 	top: 50%;  
-90: 	left: 50%; 
-91: 	margin: -50px;
-92: 	z-index: 100;
-93: }
-94: 출처: https://hunit.tistory.com/309 [Ara Blog]
-95: // 페이지 로딩
-96: 
-97: // PC 모드
-98: @media screen and (min-width: 1025px) {
-99: 	body {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-Backtrace:
-style.scss:94
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1203:in `tok!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/static_parser.rb:282:in `pseudo'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/static_parser.rb:163:in `simple_selector_sequence'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/static_parser.rb:108:in `selector'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/static_parser.rb:83:in `selector_comma_sequence'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1186:in `expr!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/scss/static_parser.rb:20:in `parse_selector'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:434:in `visit_rule'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/engine.rb:290:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"출처:\": expected pseudoclass or pseudoelement, was \" https://hunit....\"\A         on line 94 of style.scss\A \A 89: 	top: 50%;  \A 90: 	left: 50%; \A 91: 	margin: -50px;\A 92: 	z-index: 100;\A 93: }\A 94: 출처: https://hunit.tistory.com/309 [Ara Blog]\A 95: // 페이지 로딩\A 96: \A 97: // PC 모드\A 98: @media screen and (min-width: 1025px) {\A 99: 	body {"; }
+body {
+  line-height: 1;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 리셋 기본 css */
+body {
+  transition: 1s all ease;
+  font-size: 3vh;
+  color: #333;
+}
+body main .qr_code {
+  display: none;
+}
+body main section {
+  height: 100vh;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 0.8;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1025px) {
+  body .main section {
+    display: none;
+  }
+  body .main section.intro_row {
+    display: block;
+  }
+  body .main section .intro {
+    display: block;
+  }
+  body .main section .intro .qr_code {
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    display: block;
+    text-align: center;
+  }
+  body .main section .intro .qr_code p {
+    margin: 10px;
+    text-shadow: 0px 0px 20px #fff;
+  }
+  body .main section .intro .finger {
+    display: none;
+  }
+}
+div.intro {
+  height: 100vh;
+  background: url(../img/photo_01.jpg) no-repeat;
+  background-size: 140%;
+  background-position: center;
+}
+div.intro .calligraphy {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 70vw;
+}
+div.intro .calligraphy img {
+  width: 100%;
+}
+div.intro .finger {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 1.8em;
+  animation: finger_slide 3s ease infinite;
+}
+div.intro .finger img {
+  width: 100%;
+}
+
+@keyframes finger_slide {
+  0% {
+    opacity: 0.2;
+    bottom: 0.7em;
+    transform: scale(1.3);
+  }
+  20% {
+    opacity: 0.7;
+    bottom: 0.7em;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0.7;
+    bottom: 1.4em;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    bottom: 0.7em;
+    transform: scale(1.3);
+  }
+}
+.countdown {
+  position: absolute;
+  left: 1.5em;
+  bottom: 4.5em;
+  text-shadow: 0px 0px 20px #FFf;
+}
+.countdown h2 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+.countdown h3 {
+  font-size: 1em;
+  margin: 4px 0 4px 0;
+}
+.countdown span {
+  font-size: 1.5em;
+}
+
+.greetings {
+  background: url(../img/bg_photo_01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center right;
+  padding: 1.5em 2em;
+}
+.greetings p {
+  margin: 0.5em auto;
+  font-size: 0.9em;
+  text-shadow: 0px 0px 20px #fff;
+  line-height: 1.5em;
+}
+
+.summary {
+  position: absolute;
+  bottom: 2em;
+  padding: 1.5em 2em;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.summary p {
+  font-size: 0.7em;
+  margin: 1em 0;
+  text-align: center;
+  line-height: 1.5em;
+}
+.summary p span {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.contact_1 {
+  height: 76vh;
+}
+
+.contact_2 {
+  height: 19vh;
+}
+
+.box {
+  height: 100%;
+  float: left;
+  width: 50%;
+  cursor: pointer;
+  transition: 1s all ease;
+  overflow: hidden;
+}
+
+.groom {
+  background: url(../img/photo_02.jpg) no-repeat;
+}
+.groom .semicircle {
+  right: -5vh;
+  border-radius: 10vh 0 0 10vh;
+  text-align: left;
+}
+
+.bride {
+  background: url(../img/photo_03.jpg) no-repeat;
+  border-left: 1px solid #666;
+  box-sizing: border-box;
+}
+.bride .semicircle {
+  left: -5vh;
+  border-radius: 0 10vh 10vh 0;
+  text-align: right;
+}
+
+.groom, .bride {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.groom .finger, .bride .finger {
+  position: absolute;
+  top: 2.5em;
+  right: 11vw;
+  width: 1em;
+  animation: finger_click 3s ease infinite;
+}
+.groom .finger img, .bride .finger img {
+  width: 100%;
+}
+.groom .semicircle, .bride .semicircle {
+  width: 10vh;
+  height: 10vh;
+  line-height: 10vh;
+  position: absolute;
+  top: 30vh;
+  font-size: 0.6em;
+  color: #efefef;
+  background: RGBA(64, 74, 122, 0.6);
+  overflow: hidden;
+}
+.groom .contents_title, .bride .contents_title {
+  transition: 1s all ease;
+  line-height: 1em;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+.groom.on .contents_title, .bride.on .contents_title {
+  font-size: 1.5em;
+  transition: 1s all ease;
+  text-shadow: 0px 0px 10px #FFf;
+}
+.groom.on .tel, .bride.on .tel {
+  bottom: 50px;
+  opacity: 1;
+  transition: 1s all ease;
+}
+.groom .tel, .bride .tel {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  opacity: 0;
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 10px #333;
+}
+.groom .tel p, .bride .tel p {
+  margin-bottom: 10px;
+}
+.groom .tel div.img, .bride .tel div.img {
+  width: 2.6em;
+  height: 2.5em;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.groom .tel div.img img, .bride .tel div.img img {
+  height: 100%;
+  margin-left: 10%;
+}
+
+@keyframes finger_click {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+  20% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+}
+.contact_2 {
+  font-size: 6vw;
+}
+.contact_2 .parent {
+  margin-top: 0.5em;
+  float: left;
+  width: 50%;
+}
+.contact_2 .parent h3 {
+  font-size: 0.6em;
+  text-align: center;
+  margin: 0.5em 0;
+}
+.contact_2 .parent .info {
+  font-size: 0.7em;
+  margin: 0.8em;
+}
+.contact_2 .parent .info p {
+  font-size: 0.8em;
+  display: inline;
+}
+.contact_2 .parent .info p.name {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18vw;
+  font-size: 1.5em;
+  text-align: center;
+}
+.contact_2 .parent .info p.name.deceased {
+  width: 25vw;
+}
+.contact_2 .parent .info a {
+  vertical-align: middle;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0 0.4em;
+  background: #3D4882;
+  color: #efefef;
+}
+
+@media screen and (device-aspect-ratio: 3 / 4), screen and (device-aspect-ratio: 10 / 16) {
+  .contact_2 {
+    font-size: 4vw;
+  }
+}
+.gallery_info {
+  position: absolute;
+  top: 2em;
+  text-align: center;
+  width: 100vw;
+  color: #efefef;
+  text-shadow: 0px 0px 10px #111;
+  z-index: 10;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.owl-carousel {
+  width: 100vw;
+}
+.owl-carousel div.item {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.owl-carousel .slide_01 {
+  background-image: url(../img/slide_01.jpg);
+}
+.owl-carousel .slide_02 {
+  background-image: url(../img/slide_02.jpg);
+}
+.owl-carousel .slide_03 {
+  background-image: url(../img/slide_03.jpg);
+}
+.owl-carousel .slide_04 {
+  background-image: url(../img/slide_04.jpg);
+}
+.owl-carousel .slide_05 {
+  background-image: url(../img/slide_05.jpg);
+}
+.owl-carousel .slide_06 {
+  background-image: url(../img/slide_06.jpg);
+}
+.owl-carousel .slide_07 {
+  background-image: url(../img/slide_07.jpg);
+}
+
+.map {
+  text-align: center;
+}
+.map img {
+  width: 100vw;
+  max-width: 600px;
+}
+.map p {
+  float: right;
+  border: 1px solid #629C46;
+  box-sizing: border-box;
+  background: #75B45A;
+  color: #efefef;
+  font-size: 0.7em;
+  margin-right: 5vw;
+  padding: 3vw;
+}
+
+.location {
+  background: url(../img/bg_photo_02.jpg) no-repeat;
+  background-position: right bottom;
+  background-size: 70vh;
+  font-size: 0.75em;
+}
+.location h2 {
+  margin: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.location .location_text {
+  position: absolute;
+  bottom: 4vh;
+  margin: 3vw 10vw;
+}
+.location .location_text p {
+  text-shadow: 0px 0px 20px #fff;
+  padding-top: 1vh;
+}
+.location .location_text p.bold {
+  font-weight: bold;
+  padding-top: 2vh;
+}
+
+.mpp_landscape {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .mpp_landscape {
+    position: fixed;
+    display: block;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #666;
+  }
+
+  .mpp_landscape_box {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #efefef;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: mpp_landscape_anibox 1.5s infinite;
+    animation: mpp_landscape_anibox 1.5s infinite;
+  }
+
+  .mpp_landscape_box::before {
+    content: '';
+    position: absolute;
+    display: bloc;
+    width: 76px;
+    height: 50px;
+    border: 2px solid #efefef;
+    top: -2px;
+    left: 9px;
+  }
+
+  .mpp_landscape_box2 {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    right: 1px;
+    top: 20px;
+  }
+
+  .mpp_landscape_text {
+    font-size: 0.8em;
+    position: absolute;
+    width: 190px;
+    height: 0;
+    top: 130px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #FFF;
+    text-align: center;
+  }
+
+  @-webkit-keyframes mpp_landscape_anibox {
+    0% {
+      -webkit-transform: rotate(0);
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: rotate(0);
+      opacity: 1;
+    }
+    65% {
+      -webkit-transform: rotate(100deg);
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: rotate(80deg);
+      opacity: 1;
+    }
+    85% {
+      -webkit-transform: rotate(95deg);
+      opacity: 1;
+    }
+    90% {
+      -webkit-transform: rotate(85deg);
+      opacity: 1;
+    }
+    95% {
+      -webkit-transform: rotate(90deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+      opacity: 0;
+    }
+  }
+  @keyframes mpp_landscape_anibox {
+    0% {
+      transform: rotate(0);
+      opacity: 0;
+    }
+    20% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+    65% {
+      transform: rotate(100deg);
+      opacity: 1;
+    }
+    80% {
+      transform: rotate(80deg);
+      opacity: 1;
+    }
+    85% {
+      transform: rotate(95deg);
+      opacity: 1;
+    }
+    90% {
+      transform: rotate(85deg);
+      opacity: 1;
+    }
+    95% {
+      transform: rotate(90deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+  }
+}
