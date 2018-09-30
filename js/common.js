@@ -64,6 +64,7 @@ owl.on('drag.owl.carousel dragged.owl.carousel ',
   center: true,
   loop: true,
   nav: false,
+  lazyLoad: true
   // autoplay: false,
   // autoplayTimeout: 10000,
   // autoplayHoverPause: true
