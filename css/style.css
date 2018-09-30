@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 /* 리셋 기본 css */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -228,6 +227,9 @@ div.intro .finger img {
   border-radius: 10vh 0 0 10vh;
   text-align: left;
 }
+.groom .ment {
+  color: #FFB6C1;
+}
 
 .bride {
   background: url(../img/photo_03.jpg) no-repeat;
@@ -238,6 +240,9 @@ div.intro .finger img {
   left: -5vh;
   border-radius: 0 10vh 10vh 0;
   text-align: right;
+}
+.bride .ment {
+  color: #87CEEB;
 }
 
 .groom, .bride {
@@ -274,10 +279,26 @@ div.intro .finger img {
   margin-top: 1em;
   padding: 0.5em;
 }
+.groom .ment, .bride .ment {
+  opacity: 0;
+  font-size: 1px;
+  transition: 1s all ease;
+}
 .groom.on .contents_title, .bride.on .contents_title {
   font-size: 1.5em;
   transition: 1s all ease;
-  text-shadow: 0px 0px 10px #FFf;
+  text-shadow: 0px 0px 10px #FFF;
+}
+.groom.on .ment, .bride.on .ment {
+  opacity: 1;
+  margin-top: 8.5em;
+  padding: 3em 0;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 0px 0px 2px #000;
+  transition: 1s all ease;
 }
 .groom.on .tel, .bride.on .tel {
   bottom: 50px;
