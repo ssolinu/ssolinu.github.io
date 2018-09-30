@@ -70,6 +70,30 @@ body {
 } //body
 // 기본 설정
 
+// 페이지 로딩
+#loading {
+	width: 100%;  
+	height: 100%;  
+	top: 0px;
+	left: 0px;
+	position: fixed;  
+	display: block;  
+	opacity: 0.8;  
+	background-color: #fff;  
+	z-index: 99;  
+	text-align: center;
+} 
+  
+#loading-image {  
+	position: absolute;  
+	top: 50%;  
+	left: 50%; 
+	margin: -50px;
+	z-index: 100;
+}
+출처: https://hunit.tistory.com/309 [Ara Blog]
+// 페이지 로딩
+
 // PC 모드
 @media screen and (min-width: 1025px) {
 	body {
