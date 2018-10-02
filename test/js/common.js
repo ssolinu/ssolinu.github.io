@@ -1,4 +1,10 @@
 
+var w = document.body.clientWidth;
+var h = document.body.clientHeight;
+$(".size").text(w + 'x' + h);
+$(".contact_1").css("height", h*0.75 )
+
+
 // D데이 타이머 
 $('#clock').countdown('2018/11/10 16:00:00')
   .on('update.countdown', function (event) {
@@ -71,9 +77,6 @@ $(document).ready(function () {
 // 
 
 
-  var w = document.body.clientWidth;
-  var h = document.body.clientHeight;
-  $(".size").text(w +'x'+ h);
 
 
 });
