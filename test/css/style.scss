@@ -168,13 +168,13 @@ body {
   // 요약
   .summary {
     position: absolute;
-    bottom: 2em;
+    bottom: 1em;
     // padding: 1.5em 1em;
     width: 100%;
     box-sizing: border-box;
     p {
       font-size: 1em;
-      margin: 1em 0;
+      margin: 0.5em 0;
       text-align: center;
       line-height: 1.4em;
       & span {
@@ -186,6 +186,146 @@ body {
   // 요약
 }
 // 인사말
+
+// 신랑신부&혼주소개
+.groom_bride {
+  // 신랑신부 혼주 소개 높이 체크
+  .contact_1 {
+    //신랑신부소개 높이
+    height: 75vh;
+    overflow: hidden;
+    border: 1px solid #333; box-sizing: border-box;
+  }
+  .contact_2 {
+    //혼주소개 높이
+    height: 25vh;
+    overflow: hidden;
+    border: 1px solid #333; box-sizing: border-box;
+  }
+  // 신랑신부 혼주 소개 높이 체크
+  .box {
+	height: 100%;
+	float: left;
+	width: 50%;
+	cursor: pointer;
+	transition: 1s all ease;
+	overflow: hidden;
+  }
+  .groom {
+    background: url(../img/photo_02.jpg) no-repeat;
+    .semicircle {
+      right: -2.5em;
+      border-radius: 5em 0 0 5em; 
+      text-align: left;
+    }
+    .ment {
+      color: 	#FFB6C1;
+    }
+  }
+  .bride {
+    background: url(../img/photo_03.jpg) no-repeat;
+    border-left: 1px solid #666; box-sizing: border-box;
+    .semicircle {
+      left: -2.5em;
+      border-radius: 0 5em 5em 0; 
+      text-align: right;
+    }
+    .ment {
+        color: 	#87CEEB;
+    }
+  }
+
+
+  .groom, .bride {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .finger { //손가락
+      position: absolute;
+      top: 2.5em;
+      right: 11vw;
+      width: 1em;
+      animation: finger_click 3s ease infinite;
+      img {
+        width: 100%;
+      }
+    }
+    .semicircle {
+      width: 5em;
+      height: 5em;
+      line-height: 5em;
+      position: absolute;
+      top: 30vh;
+      font-size: 1em;
+      color: #efefef;
+      background: RGBA(64, 74, 122, 0.6);
+      overflow: hidden;
+    }
+    .contents_title {
+      transition: 1s all ease;
+      line-height: 1em;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 1em;
+      padding: 0.5em;
+    }
+    .ment {
+      opacity: 0;
+      font-size: 1px;
+      transition: 1s all ease;
+    }
+    &.on {
+      .contents_title {
+        font-size: 1.5em;
+        transition: 1s all ease;
+        text-shadow: 0px 0px 10px #FFF;
+      }
+      .ment {
+        opacity: 1;
+        margin-top: 8em;
+        padding: 3em 0;
+        font-size: 1em;
+        line-height: 1.2em;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 1px 1px 2px #333;
+        transition: 1s all ease;
+      }
+      .tel {
+        bottom: 1em;
+        opacity: 1;
+        transition: 1s all ease;
+      }
+    }
+    .tel {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      opacity: 0;
+      font-size: 0.9em;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0px 0px 10px #333;
+      p {
+        margin-bottom: 10px;
+      }
+      div.img {
+        width: 2.6em;
+        height: 2.5em;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        img {
+          height: 100%;
+          margin-left: 10%;
+        }
+      }
+    }
+  } 
+
+}
+// 신랑신부&혼주소개
 
 
 

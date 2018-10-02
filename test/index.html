@@ -16,7 +16,7 @@
   <meta property="og:description" content="11월 10일 창인과 소현이 서로 함께 합니다. 축복해 주세요 ^^">
   <!-- //오픈그래프 프로토콜 -->
   <title>창인과 소현 결혼 합니다. [ 11월 10일 오후4시 ]</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <!-- Onepage scroll -->
   <link rel="stylesheet" href="css/onepage-scroll.css">
   <!-- Owl Important Owl stylesheet -->
@@ -106,7 +106,7 @@
       <div class="finger">
         <img src="img/one-finger.svg" alt="스크롤 하세요">
       </div>
-      <div class="semicircle">&nbsp;&nbsp;&nbsp;신랑</div>
+      <div class="semicircle">&nbsp;&nbsp;신랑</div>
       <div class="contents_title">백창인</div>
       <div class="ment">
         <p>"너의 그 개구쟁이 같은 미소<br> 끝까지 지켜줄게!!"</p>
@@ -124,7 +124,7 @@
       <div class="finger">
         <img src="img/one-finger.svg" alt="스크롤 하세요">
       </div>
-      <div class="semicircle">신부&nbsp;&nbsp;&nbsp;</div>
+      <div class="semicircle">신부&nbsp;&nbsp;</div>
       <div class="contents_title">이소현</div>
       <div class="ment">
         <p>"평생 너의 최고의<br> 친구가 되어줄게!!"</p>
@@ -224,7 +224,29 @@
 <script src="js/jquery.onepage-scroll.min.js"></script>
 <!-- Owl Include js plugin -->
 <script src="owlcarousel/owl.carousel.min.js"></script>
-<script src="js/common.js?1"></script>
+<!-- <script src="js/common.js"></script> -->
 <!-- //자바스크립트 -->
+<script>
+  // 자스 CSS 캐시 없이 하기 위한 임시방편
+  function includeJs(filepath) {
+    var js = document.createElement("script");
+    var timestamp = new Date().getTime();
+    js.type = "text/javascript";
+    js.src = filepath + "?v=" + timestamp;
+
+    document.body.appendChild(js);
+  }
+  includeJs("js/common.js");
+  // 자스 CSS 캐시 없이 하기 위한 임시방편
+  function includeCss(filepath) {
+    var css = document.createElement("link");
+    var timestamp = new Date().getTime();
+    css.rel = "stylesheet";
+    css.href = filepath + "?v=" + timestamp;
+
+    document.body.appendChild(css);
+  }
+  includeCss("css/style.css");
+</script>
 </body>
 </html>

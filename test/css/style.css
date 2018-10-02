@@ -157,17 +157,147 @@ body h3 {
 }
 .greetings .summary {
   position: absolute;
-  bottom: 2em;
+  bottom: 1em;
   width: 100%;
   box-sizing: border-box;
 }
 .greetings .summary p {
   font-size: 1em;
-  margin: 1em 0;
+  margin: 0.5em 0;
   text-align: center;
   line-height: 1.4em;
 }
 .greetings .summary p span {
   font-size: 1.2em;
   font-weight: bold;
+}
+
+.groom_bride .contact_1 {
+  height: 75vh;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+.groom_bride .contact_2 {
+  height: 25vh;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+.groom_bride .box {
+  height: 100%;
+  float: left;
+  width: 50%;
+  cursor: pointer;
+  transition: 1s all ease;
+  overflow: hidden;
+}
+.groom_bride .groom {
+  background: url(../img/photo_02.jpg) no-repeat;
+}
+.groom_bride .groom .semicircle {
+  right: -2.5em;
+  border-radius: 5em 0 0 5em;
+  text-align: left;
+}
+.groom_bride .groom .ment {
+  color: #FFB6C1;
+}
+.groom_bride .bride {
+  background: url(../img/photo_03.jpg) no-repeat;
+  border-left: 1px solid #666;
+  box-sizing: border-box;
+}
+.groom_bride .bride .semicircle {
+  left: -2.5em;
+  border-radius: 0 5em 5em 0;
+  text-align: right;
+}
+.groom_bride .bride .ment {
+  color: #87CEEB;
+}
+.groom_bride .groom, .groom_bride .bride {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.groom_bride .groom .finger, .groom_bride .bride .finger {
+  position: absolute;
+  top: 2.5em;
+  right: 11vw;
+  width: 1em;
+  animation: finger_click 3s ease infinite;
+}
+.groom_bride .groom .finger img, .groom_bride .bride .finger img {
+  width: 100%;
+}
+.groom_bride .groom .semicircle, .groom_bride .bride .semicircle {
+  width: 5em;
+  height: 5em;
+  line-height: 5em;
+  position: absolute;
+  top: 30vh;
+  font-size: 1em;
+  color: #efefef;
+  background: RGBA(64, 74, 122, 0.6);
+  overflow: hidden;
+}
+.groom_bride .groom .contents_title, .groom_bride .bride .contents_title {
+  transition: 1s all ease;
+  line-height: 1em;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+.groom_bride .groom .ment, .groom_bride .bride .ment {
+  opacity: 0;
+  font-size: 1px;
+  transition: 1s all ease;
+}
+.groom_bride .groom.on .contents_title, .groom_bride .bride.on .contents_title {
+  font-size: 1.5em;
+  transition: 1s all ease;
+  text-shadow: 0px 0px 10px #FFF;
+}
+.groom_bride .groom.on .ment, .groom_bride .bride.on .ment {
+  opacity: 1;
+  margin-top: 8em;
+  padding: 3em 0;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 1px 1px 2px #333;
+  transition: 1s all ease;
+}
+.groom_bride .groom.on .tel, .groom_bride .bride.on .tel {
+  bottom: 1em;
+  opacity: 1;
+  transition: 1s all ease;
+}
+.groom_bride .groom .tel, .groom_bride .bride .tel {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  opacity: 0;
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 10px #333;
+}
+.groom_bride .groom .tel p, .groom_bride .bride .tel p {
+  margin-bottom: 10px;
+}
+.groom_bride .groom .tel div.img, .groom_bride .bride .tel div.img {
+  width: 2.6em;
+  height: 2.5em;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.groom_bride .groom .tel div.img img, .groom_bride .bride .tel div.img img {
+  height: 100%;
+  margin-left: 10%;
 }
