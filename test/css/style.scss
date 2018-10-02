@@ -46,6 +46,7 @@ body {
   color: #333;
   section {
     background: #fff;
+    overflow: hidden;
   }
   img {
     width: 100%;
@@ -75,7 +76,8 @@ body {
 #loading-image {  
 	position: absolute;  
 	top: 50%;  
-	left: 50%; 
+  left: 50%; 
+  width: 100px;
 	margin: -50px;
 	z-index: 100;
 }
@@ -477,7 +479,136 @@ body {
 			}
 		}
 	}
-
-
 }
 // 오시는길
+
+// 가로막기 CSS
+.mpp_landscape {
+	display: none
+}
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+	.mpp_landscape {
+		position: fixed;
+		display: block;
+		z-index: 100;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: #666 
+	}
+	.mpp_landscape_box {
+		position: absolute;
+		width: 100px;
+		height: 50px;
+		border: 2px solid #efefef;
+		border-radius: 8px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		-webkit-animation: mpp_landscape_anibox 1.5s infinite;
+		animation: mpp_landscape_anibox 1.5s infinite;
+	}
+	.mpp_landscape_box::before {
+		content: '';
+		position: absolute;
+		display: bloc;
+		width: 76px;
+		height: 50px;
+		border: 2px solid #efefef;
+		top: -2px;
+		left: 9px
+	}
+	.mpp_landscape_box2 {
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		right: 1px;
+		top: 20px
+	}
+	.mpp_landscape_text {
+		font-size: 1em;
+		position: absolute;
+		height: 0;
+		top: 130px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		color: #FFF;
+		text-align: center
+	}
+	@-webkit-keyframes mpp_landscape_anibox{
+		0% {
+				-webkit-transform: rotate(0);
+				opacity: 0
+		}
+		20% {
+				-webkit-transform: rotate(0);
+				opacity: 1
+		}
+		65% {
+				-webkit-transform: rotate(100deg);
+				opacity: 1
+		}
+		80% {
+				-webkit-transform: rotate(80deg);
+				opacity: 1
+		}
+		85% {
+				-webkit-transform: rotate(95deg);
+				opacity: 1
+		}
+		90% {
+				-webkit-transform: rotate(85deg);
+				opacity: 1
+		}
+		95% {
+				-webkit-transform: rotate(90deg);
+				opacity: 1
+		}
+		100% {
+				-webkit-transform: rotate(90deg);
+				opacity: 0
+		}
+	}
+	@keyframes mpp_landscape_anibox{
+		0% {
+				transform: rotate(0);
+				opacity: 0
+		}
+		20% {
+				transform: rotate(0);
+				opacity: 1
+		}
+		65% {
+				transform: rotate(100deg);
+				opacity: 1
+		}
+		80% {
+				transform: rotate(80deg);
+				opacity: 1
+		}
+		85% {
+				transform: rotate(95deg);
+				opacity: 1
+		}
+		90% {
+				transform: rotate(85deg);
+				opacity: 1
+		}
+		95% {
+				transform: rotate(90deg);
+				opacity: 1
+		}
+		100% {
+				transform: rotate(90deg);
+				opacity: 0
+		}
+	}
+}
+// 가로막기 CSS

@@ -1,8 +1,13 @@
-
+//vh 안먹어서 JS로 지정해주기
 var w = document.body.clientWidth;
 var h = document.body.clientHeight;
-$(".size").text(w + 'x' + h);
-$(".contact_1").css("height", h*0.75 )
+$(".size").text(w + 'x' + h); // 브라우져 사이즈 보이게 더미용
+$(".contact_1").css("height", h*0.75 );
+$(".contact_2").css("height", h*0.25 );
+$("div.item").css("height", h );
+$(".location_text").css("font-size", h*0.025 );
+
+//vh 안먹어서 JS로 지정해주기
 
 
 // D데이 타이머 
