@@ -44,6 +44,9 @@ a, a:hover, a:active {
 body {
   font-size: 100%;
   color: #333;
+  .qr_code {
+    display: none;
+  }
   section {
     background: #fff;
     overflow: hidden;
@@ -83,25 +86,12 @@ body {
 }
 // 페이지 로딩
 
-// PC대응
-.qr_code {
-  display: none;
-  position: absolute;
-  top: 10em;
-  right: 10em;
-  text-align: center;
-  p {
-    margin-top: 1em;
-    font-size: 2em;
-  }
-}
-// PC대응
-
 // 인트로
 .intro {
   background: url(../img/photo_01.jpg) no-repeat;
-	background-size: 140%;
-	background-position: center;
+  // background-size: 140%;
+  background-size: cover;
+	background-position: center center;
 	.calligraphy {
 		position: absolute;
 		top: 2em;
@@ -152,6 +142,32 @@ body {
   }
 }
 // 인트로 핑거 애니메이션
+// PC대응
+@media screen and (min-width: 1025px) {
+  .greetings, .groom_bride, .gallery, .location, .mpp_landscape {
+    display: none;
+  }
+  .intro {
+    display: block;
+    height: 100vh;
+    .finger {
+      display: none;
+    }
+    .qr_code {
+      display: block;
+      position: absolute;
+      top: 20em;
+      right: 10em;
+      width: 20em;;
+      text-align: center;
+      p {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+// PC대응
 
 // 인사말
 .greetings {
@@ -435,6 +451,15 @@ body {
 	.slide_07 {
 		background-image: url(../img/slide_07.jpg);
 	}
+	.slide_08 {
+		background-image: url(../img/slide_08.jpg);
+	}
+	.slide_09 {
+		background-image: url(../img/slide_09.jpg);
+	}
+	.slide_10 {
+		background-image: url(../img/slide_10.jpg);
+	}
 }
 // 갤러리
 
@@ -612,3 +637,23 @@ body {
 	}
 }
 // 가로막기 CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
