@@ -69,5 +69,12 @@ $(document).ready(function () {
 
 // 
 // 
+
+
+  var w = document.body.clientWidth;
+  var h = document.body.clientHeight;
+  $(".size").text(w +'x'+ h);
+
+
 });
 // 기본 자동 실행 코드
