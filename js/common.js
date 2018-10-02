@@ -46,8 +46,8 @@ $(document).ready(function () {
     // 원페이지 플러그인 실행
     $(".main").onepage_scroll({
       sectionContainer: "section",
-      easing: "ease-out",
-      animationTime: 1000,
+      easing: "ease",
+      animationTime: 2000,
       pagination: false,
       keyboard: true,
       loop: false

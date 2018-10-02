@@ -161,27 +161,37 @@ body h3 {
     font-size: 1.5em;
   }
 }
-.greetings .greetings_box {
+.greetings {
   background: url(../img/bg_photo_01.jpg) no-repeat;
   background-size: cover;
   background-position: center right;
-  padding: 1.5em 2em;
+}
+.greetings .greetings_box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em 2em;
 }
 .greetings .greetings_box p {
   margin: 0.5em auto;
   font-size: 1.2em;
   text-shadow: 0px 0px 20px #fff;
   line-height: 1.4em;
+  font-style: italic;
 }
 .greetings .summary {
   position: absolute;
-  bottom: 1em;
+  bottom: 0em;
   width: 100%;
   box-sizing: border-box;
+  background: -moz-linear-gradient(bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .greetings .summary p {
   font-size: 1em;
-  margin: 0.5em 0;
+  margin: 0.5em 0 1em 0;
   text-align: center;
   line-height: 1.4em;
 }
