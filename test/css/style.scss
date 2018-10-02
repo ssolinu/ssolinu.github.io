@@ -194,138 +194,290 @@ body {
     //신랑신부소개 높이
     height: 75vh;
     overflow: hidden;
-    border: 1px solid #333; box-sizing: border-box;
+    // border: 1px solid #333; box-sizing: border-box;
   }
   .contact_2 {
     //혼주소개 높이
     height: 25vh;
     overflow: hidden;
-    border: 1px solid #333; box-sizing: border-box;
+    // border: 1px solid #333; box-sizing: border-box;
   }
   // 신랑신부 혼주 소개 높이 체크
-  .box {
-	height: 100%;
-	float: left;
-	width: 50%;
-	cursor: pointer;
-	transition: 1s all ease;
-	overflow: hidden;
-  }
-  .groom {
-    background: url(../img/photo_02.jpg) no-repeat;
-    .semicircle {
-      right: -2.5em;
-      border-radius: 5em 0 0 5em; 
-      text-align: left;
+  // 신랑신부 소개
+  .contact_1 {
+    .box {
+    height: 100%;
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    transition: 1s all ease;
+    overflow: hidden;
     }
-    .ment {
-      color: 	#FFB6C1;
-    }
-  }
-  .bride {
-    background: url(../img/photo_03.jpg) no-repeat;
-    border-left: 1px solid #666; box-sizing: border-box;
-    .semicircle {
-      left: -2.5em;
-      border-radius: 0 5em 5em 0; 
-      text-align: right;
-    }
-    .ment {
-        color: 	#87CEEB;
-    }
-  }
-
-
-  .groom, .bride {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    .finger { //손가락
-      position: absolute;
-      top: 2.5em;
-      right: 11vw;
-      width: 1em;
-      animation: finger_click 3s ease infinite;
-      img {
-        width: 100%;
-      }
-    }
-    .semicircle {
-      width: 5em;
-      height: 5em;
-      line-height: 5em;
-      position: absolute;
-      top: 30vh;
-      font-size: 1em;
-      color: #efefef;
-      background: RGBA(64, 74, 122, 0.6);
-      overflow: hidden;
-    }
-    .contents_title {
-      transition: 1s all ease;
-      line-height: 1em;
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 1em;
-      padding: 0.5em;
-    }
-    .ment {
-      opacity: 0;
-      font-size: 1px;
-      transition: 1s all ease;
-    }
-    &.on {
-      .contents_title {
-        font-size: 1.5em;
-        transition: 1s all ease;
-        text-shadow: 0px 0px 10px #FFF;
+    .groom {
+      background: url(../img/photo_02.jpg) no-repeat;
+      .semicircle {
+        right: -2.5em;
+        border-radius: 5em 0 0 5em; 
+        text-align: left;
       }
       .ment {
-        opacity: 1;
-        margin-top: 8em;
-        padding: 3em 0;
-        font-size: 1em;
-        line-height: 1.2em;
-        font-style: italic;
-        text-align: center;
-        text-shadow: 1px 1px 2px #333;
-        transition: 1s all ease;
-      }
-      .tel {
-        bottom: 1em;
-        opacity: 1;
-        transition: 1s all ease;
+        color: 	#FFB6C1;
       }
     }
-    .tel {
-      position: absolute;
-      bottom: -100%;
-      width: 100%;
-      opacity: 0;
-      font-size: 0.9em;
-      text-align: center;
-      color: #fff;
-      text-shadow: 0px 0px 10px #333;
-      p {
-        margin-bottom: 10px;
+    .bride {
+      background: url(../img/photo_03.jpg) no-repeat;
+      border-left: 1px solid #666; box-sizing: border-box;
+      .semicircle {
+        left: -2.5em;
+        border-radius: 0 5em 5em 0; 
+        text-align: right;
       }
-      div.img {
-        width: 2.6em;
-        height: 2.5em;
-        border-radius: 50%;
-        padding: 10px;
+      .ment {
+          color: 	#87CEEB;
+      }
+    }
+    .groom, .bride {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      .finger { //손가락
+        position: absolute;
+        top: 2.5em;
+        right: 11vw;
+        width: 2em;
+        animation: finger_click 3s ease infinite;
+        p {
+          padding: 4px;
+          text-align: center;
+          font-size: 0.8em;
+        }
+      }
+      .semicircle {
+        width: 5em;
+        height: 5em;
+        line-height: 5em;
+        position: absolute;
+        top: 30vh;
+        font-size: 1em;
+        color: #efefef;
+        background: RGBA(64, 74, 122, 0.6);
+        overflow: hidden;
+      }
+      .contents_title {
+        transition: 1s all ease;
+        line-height: 1em;
+        text-align: center;
         margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.8);
-        img {
-          height: 100%;
-          margin-left: 10%;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+      .ment {
+        opacity: 0;
+        font-size: 1px;
+        transition: 1s all ease;
+      }
+      &.on {
+        .contents_title {
+          font-size: 1.5em;
+          transition: 1s all ease;
+          text-shadow: 0px 0px 10px #FFF;
+        }
+        .ment {
+          opacity: 1;
+          margin-top: 8em;
+          padding: 3em 0;
+          font-size: 1em;
+          line-height: 1.2em;
+          font-style: italic;
+          text-align: center;
+          text-shadow: 1px 1px 2px #333;
+          transition: 1s all ease;
+        }
+        .tel {
+          bottom: 1em;
+          opacity: 1;
+          transition: 1s all ease;
+        }
+      }
+      .tel {
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        opacity: 0;
+        font-size: 0.9em;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 0px 10px #333;
+        p {
+          margin-bottom: 10px;
+        }
+        div.img {
+          width: 2.6em;
+          height: 2.5em;
+          border-radius: 50%;
+          padding: 10px;
+          margin: 0 auto;
+          background-color: rgba(255, 255, 255, 0.8);
+          img {
+            height: 100%;
+            margin-left: 10%;
+          }
+        }
+      }
+    } 
+  }
+  
+  // 혼주소개
+  .contact_2 {
+    font-size: 4vw;
+    .parent {
+      margin-top: 1em;
+      float: left;
+      width: 50%;
+      h3 {
+        font-size: 0.8em;
+        text-align: center;
+        margin: 1em 0;
+      }
+      .info {
+        margin: 0.8em auto;
+        width: 80%;
+        text-align:justify;
+        p {
+          font-size: 0.7em;
+          display: inline;
+            &.name {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.3em;
+            padding-left: 0.5em;
+            }
+        } 
+        a {
+          vertical-align: middle;
+          border: 1px solid #333; box-sizing: border-box;
+          border-radius: 5px;
+          padding: 0.2em 0.5em;
+          background: #3D4882;
+          color: #efefef;
+          
         }
       }
     }
-  } 
-
+  }
 }
 // 신랑신부&혼주소개
 
+// 신랑신부 클릭 애니메이션
+@keyframes finger_click {
+  0% {
+		opacity: 0.2;
+		transform: scale(1.3)
+  }
+  20% {
+		opacity: 0.6;
+		transform: scale(1)
+  }
+  60% {
+		opacity: 0.6;
+		transform: scale(1)	
+	}
+  100% {
+		opacity: 0.2;
+		transform: scale(1.3)
+  }
+}
+// 신랑신부 클릭 애니메이션
+
+// 갤러리
+.gallery {
+  // 갤러리 텍스트
+  .gallery_info {
+    position: absolute;
+    top: 2em;
+    text-align: center;
+    width: 100vw;
+    color: #666;
+    text-shadow: 0px 0px 10px #ECC1CF;
+    z-index: 10;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  // 갤러리 텍스트
+	div.item {
+		height: 100vh;
+		// margin: 0 auto;
+		overflow: hidden;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.slide_01 {
+		background-image: url(../img/slide_01.jpg);
+	}
+	.slide_02 {
+		background-image: url(../img/slide_02.jpg);
+	}
+	.slide_03 {
+		background-image: url(../img/slide_03.jpg);
+	}
+	.slide_04 {
+		background-image: url(../img/slide_04.jpg);
+	}
+	.slide_05 {
+		background-image: url(../img/slide_05.jpg);
+	}
+	.slide_06 {
+		background-image: url(../img/slide_06.jpg);
+	}
+	.slide_07 {
+		background-image: url(../img/slide_07.jpg);
+	}
+}
+// 갤러리
+
+// 오시는길
+.location {
+  background: url(../img/bg_photo_02.jpg) no-repeat;
+	background-position: right bottom;
+  background-size: 70vh;
+  h2 {
+		margin: 1em;
+		text-align: center;
+		font-weight: bold;
+	}
+  .map {
+    text-align: center;
+    img {
+      max-width: 600px;
+    }
+    p {
+      float: right;
+      border: 1px solid #629C46; box-sizing: border-box;
+      background: #75B45A;
+      color: #fff;
+      font-size: 0.7em;
+      margin-right: 2em;
+      padding: 0.7em;
+    }
+  }
+  .location_text {
+    font-size: 2.5vh; //디바이스 높이로 설정
+		position: absolute;
+		bottom: 1em;
+		margin: 0 3em;
+		p {
+			text-shadow: 0px 0px 20px #fff;
+      // padding-top: 0.1em;
+      font-size: 0.9em;
+      line-height: 1.2em;
+			&.bold {
+				font-weight: bold;
+				padding-top: 0.8em;
+			}
+		}
+	}
 
 
+}
+// 오시는길

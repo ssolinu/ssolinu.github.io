@@ -175,16 +175,12 @@ body h3 {
 .groom_bride .contact_1 {
   height: 75vh;
   overflow: hidden;
-  border: 1px solid #333;
-  box-sizing: border-box;
 }
 .groom_bride .contact_2 {
   height: 25vh;
   overflow: hidden;
-  border: 1px solid #333;
-  box-sizing: border-box;
 }
-.groom_bride .box {
+.groom_bride .contact_1 .box {
   height: 100%;
   float: left;
   width: 50%;
@@ -192,46 +188,48 @@ body h3 {
   transition: 1s all ease;
   overflow: hidden;
 }
-.groom_bride .groom {
+.groom_bride .contact_1 .groom {
   background: url(../img/photo_02.jpg) no-repeat;
 }
-.groom_bride .groom .semicircle {
+.groom_bride .contact_1 .groom .semicircle {
   right: -2.5em;
   border-radius: 5em 0 0 5em;
   text-align: left;
 }
-.groom_bride .groom .ment {
+.groom_bride .contact_1 .groom .ment {
   color: #FFB6C1;
 }
-.groom_bride .bride {
+.groom_bride .contact_1 .bride {
   background: url(../img/photo_03.jpg) no-repeat;
   border-left: 1px solid #666;
   box-sizing: border-box;
 }
-.groom_bride .bride .semicircle {
+.groom_bride .contact_1 .bride .semicircle {
   left: -2.5em;
   border-radius: 0 5em 5em 0;
   text-align: right;
 }
-.groom_bride .bride .ment {
+.groom_bride .contact_1 .bride .ment {
   color: #87CEEB;
 }
-.groom_bride .groom, .groom_bride .bride {
+.groom_bride .contact_1 .groom, .groom_bride .contact_1 .bride {
   background-size: cover;
   background-position: center;
   position: relative;
 }
-.groom_bride .groom .finger, .groom_bride .bride .finger {
+.groom_bride .contact_1 .groom .finger, .groom_bride .contact_1 .bride .finger {
   position: absolute;
   top: 2.5em;
   right: 11vw;
-  width: 1em;
+  width: 2em;
   animation: finger_click 3s ease infinite;
 }
-.groom_bride .groom .finger img, .groom_bride .bride .finger img {
-  width: 100%;
+.groom_bride .contact_1 .groom .finger p, .groom_bride .contact_1 .bride .finger p {
+  padding: 4px;
+  text-align: center;
+  font-size: 0.8em;
 }
-.groom_bride .groom .semicircle, .groom_bride .bride .semicircle {
+.groom_bride .contact_1 .groom .semicircle, .groom_bride .contact_1 .bride .semicircle {
   width: 5em;
   height: 5em;
   line-height: 5em;
@@ -242,7 +240,7 @@ body h3 {
   background: RGBA(64, 74, 122, 0.6);
   overflow: hidden;
 }
-.groom_bride .groom .contents_title, .groom_bride .bride .contents_title {
+.groom_bride .contact_1 .groom .contents_title, .groom_bride .contact_1 .bride .contents_title {
   transition: 1s all ease;
   line-height: 1em;
   text-align: center;
@@ -250,17 +248,17 @@ body h3 {
   margin-top: 1em;
   padding: 0.5em;
 }
-.groom_bride .groom .ment, .groom_bride .bride .ment {
+.groom_bride .contact_1 .groom .ment, .groom_bride .contact_1 .bride .ment {
   opacity: 0;
   font-size: 1px;
   transition: 1s all ease;
 }
-.groom_bride .groom.on .contents_title, .groom_bride .bride.on .contents_title {
+.groom_bride .contact_1 .groom.on .contents_title, .groom_bride .contact_1 .bride.on .contents_title {
   font-size: 1.5em;
   transition: 1s all ease;
   text-shadow: 0px 0px 10px #FFF;
 }
-.groom_bride .groom.on .ment, .groom_bride .bride.on .ment {
+.groom_bride .contact_1 .groom.on .ment, .groom_bride .contact_1 .bride.on .ment {
   opacity: 1;
   margin-top: 8em;
   padding: 3em 0;
@@ -271,12 +269,12 @@ body h3 {
   text-shadow: 1px 1px 2px #333;
   transition: 1s all ease;
 }
-.groom_bride .groom.on .tel, .groom_bride .bride.on .tel {
+.groom_bride .contact_1 .groom.on .tel, .groom_bride .contact_1 .bride.on .tel {
   bottom: 1em;
   opacity: 1;
   transition: 1s all ease;
 }
-.groom_bride .groom .tel, .groom_bride .bride .tel {
+.groom_bride .contact_1 .groom .tel, .groom_bride .contact_1 .bride .tel {
   position: absolute;
   bottom: -100%;
   width: 100%;
@@ -286,10 +284,10 @@ body h3 {
   color: #fff;
   text-shadow: 0px 0px 10px #333;
 }
-.groom_bride .groom .tel p, .groom_bride .bride .tel p {
+.groom_bride .contact_1 .groom .tel p, .groom_bride .contact_1 .bride .tel p {
   margin-bottom: 10px;
 }
-.groom_bride .groom .tel div.img, .groom_bride .bride .tel div.img {
+.groom_bride .contact_1 .groom .tel div.img, .groom_bride .contact_1 .bride .tel div.img {
   width: 2.6em;
   height: 2.5em;
   border-radius: 50%;
@@ -297,7 +295,144 @@ body h3 {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.groom_bride .groom .tel div.img img, .groom_bride .bride .tel div.img img {
+.groom_bride .contact_1 .groom .tel div.img img, .groom_bride .contact_1 .bride .tel div.img img {
   height: 100%;
   margin-left: 10%;
+}
+.groom_bride .contact_2 {
+  font-size: 4vw;
+}
+.groom_bride .contact_2 .parent {
+  margin-top: 1em;
+  float: left;
+  width: 50%;
+}
+.groom_bride .contact_2 .parent h3 {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 1em 0;
+}
+.groom_bride .contact_2 .parent .info {
+  margin: 0.8em auto;
+  width: 80%;
+  text-align: justify;
+}
+.groom_bride .contact_2 .parent .info p {
+  font-size: 0.7em;
+  display: inline;
+}
+.groom_bride .contact_2 .parent .info p.name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.3em;
+  padding-left: 0.5em;
+}
+.groom_bride .contact_2 .parent .info a {
+  vertical-align: middle;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0.2em 0.5em;
+  background: #3D4882;
+  color: #efefef;
+}
+
+@keyframes finger_click {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+  20% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+}
+.gallery .gallery_info {
+  position: absolute;
+  top: 2em;
+  text-align: center;
+  width: 100vw;
+  color: #666;
+  text-shadow: 0px 0px 10px #ECC1CF;
+  z-index: 10;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.gallery div.item {
+  height: 100vh;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gallery .slide_01 {
+  background-image: url(../img/slide_01.jpg);
+}
+.gallery .slide_02 {
+  background-image: url(../img/slide_02.jpg);
+}
+.gallery .slide_03 {
+  background-image: url(../img/slide_03.jpg);
+}
+.gallery .slide_04 {
+  background-image: url(../img/slide_04.jpg);
+}
+.gallery .slide_05 {
+  background-image: url(../img/slide_05.jpg);
+}
+.gallery .slide_06 {
+  background-image: url(../img/slide_06.jpg);
+}
+.gallery .slide_07 {
+  background-image: url(../img/slide_07.jpg);
+}
+
+.location {
+  background: url(../img/bg_photo_02.jpg) no-repeat;
+  background-position: right bottom;
+  background-size: 70vh;
+}
+.location h2 {
+  margin: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.location .map {
+  text-align: center;
+}
+.location .map img {
+  max-width: 600px;
+}
+.location .map p {
+  float: right;
+  border: 1px solid #629C46;
+  box-sizing: border-box;
+  background: #75B45A;
+  color: #fff;
+  font-size: 0.7em;
+  margin-right: 2em;
+  padding: 0.7em;
+}
+.location .location_text {
+  font-size: 2.5vh;
+  position: absolute;
+  bottom: 1em;
+  margin: 0 3em;
+}
+.location .location_text p {
+  text-shadow: 0px 0px 20px #fff;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+.location .location_text p.bold {
+  font-weight: bold;
+  padding-top: 0.8em;
 }
