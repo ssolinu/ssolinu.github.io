@@ -1,0 +1,665 @@
+@charset "utf-8";
+/* 리셋 기본 css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	// font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	vertical-align: middle;
+}
+a, a:hover, a:active {
+	color: inherit;
+	text-decoration: none;
+}
+/* 리셋 기본 css */
+
+// 기본설정
+body {
+  font-size: 100%;
+  color: #333;
+  .qr_code {
+    display: none;
+  }
+  section {
+    background: #fff;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+  font-size: 1.5em;
+  margin: 4px 0 4px 0;
+  }
+
+}
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+// 기본설정
+
+// 페이지 로딩중
+#loading {
+	width: 100%;  
+	height: 100%;  
+	top: 0px;
+	left: 0px;
+	position: fixed;  
+	display: block;  
+	opacity: 0.8;  
+	background-color: #fff;  
+	z-index: 99;  
+	text-align: center;
+} 
+  
+#loading-image {  
+	position: absolute;  
+	top: 50%;  
+  left: 50%; 
+  width: 100px;
+	margin: -50px;
+	z-index: 100;
+}
+// 페이지 로딩
+
+// 인트로
+.intro {
+  background: url(../img/photo_01.jpg) no-repeat;
+  background-size: 140%;
+	background-position: center center;
+	.calligraphy {
+		position: absolute;
+		top: 2em;
+		left: 1.5em;
+		width: 70vw;
+  }
+  .finger {
+		position: absolute;
+		// bottom: 3em;
+		right: 2em;
+		width: 2.5em;
+		animation: finger_slide 3s ease infinite;
+  }
+  // 디데이카운터
+  .countdown {
+    position: absolute;
+    left: 2em;
+    bottom: 4.5em;
+    text-shadow: 0px 0px 20px #FFf;
+    span {
+      font-size: 1.8em;
+    }
+  }
+  // 디데이카운터
+}
+// 인트로
+// 인트로 핑거 애니메이션
+@keyframes finger_slide {
+  0% {
+		opacity: 0.2;
+		bottom: 2em;
+		transform: scale(1.3)
+  }
+  20% {
+		opacity: 0.7;
+		bottom: 2em;
+		transform: scale(1)
+  }
+  70% {
+		opacity: 0.7;
+		bottom: 3em;
+		transform: scale(1)	
+	}
+  100% {
+		opacity: 0.2;
+		bottom: 2em;
+		transform: scale(1.3)
+  }
+}
+// 인트로 핑거 애니메이션
+// PC대응
+@media screen and (min-width: 1025px) {
+  .greetings, .groom_bride, .gallery, .location, .mpp_landscape {
+    display: none;
+  }
+  .intro {
+    display: block;
+    height: 100vh;
+    .finger {
+      display: none;
+    }
+    .qr_code {
+      display: block;
+      position: absolute;
+      top: 20em;
+      right: 5em;
+      width: 20em;;
+      text-align: center;
+      p {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+// PC대응
+
+// 인사말
+.greetings {
+    background: url(../img/bg_photo_01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center right;
+  .greetings_box {
+    background: rgba(255,255,255,0.3);
+    padding: 1em 2em;
+    p {
+      margin: 0.5em auto;
+      // text-align: center;
+      font-size: 1.2em;
+      text-shadow: 0px 0px 20px #fff;
+      line-height: 1.4em;
+      font-style: italic;
+    }
+  }
+  // 요약
+  .summary {
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+    box-sizing: border-box;
+    // 그라데이션
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    p {
+      font-size: 1em;
+      margin: 0.5em 0 1em 0;
+      text-align: center;
+      line-height: 1.4em;
+      & span {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+  }
+  // 요약
+}
+// 인사말
+
+// 신랑신부&혼주소개
+.groom_bride {
+  // 신랑신부 혼주 소개 높이 체크
+  .contact_1 {
+    //신랑신부소개 높이
+    height: 75vh;
+    overflow: hidden;
+    // border: 1px solid #333; box-sizing: border-box;
+  }
+  .contact_2 {
+    //혼주소개 높이
+    height: 25vh;
+    overflow: hidden;
+    // border: 1px solid #333; box-sizing: border-box;
+  }
+  // 신랑신부 혼주 소개 높이 체크
+  // 신랑신부 소개
+  .contact_1 {
+    .box {
+    height: 100%;
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    transition: 1s all ease;
+    overflow: hidden;
+    }
+    .groom {
+      background: url(../img/photo_02.jpg) no-repeat;
+      .semicircle {
+        right: -2.5em;
+        border-radius: 5em 0 0 5em; 
+        text-align: left;
+      }
+      .ment {
+        color: 	#FFB6C1;
+      }
+    }
+    .bride {
+      background: url(../img/photo_03.jpg) no-repeat;
+      border-left: 1px solid #666; box-sizing: border-box;
+      .semicircle {
+        left: -2.5em;
+        border-radius: 0 5em 5em 0; 
+        text-align: right;
+      }
+      .ment {
+          color: 	#87CEEB;
+      }
+    }
+    .groom, .bride {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      .finger { //손가락
+        position: absolute;
+        top: 2.5em;
+        right: 11vw;
+        width: 2em;
+        animation: finger_click 3s ease infinite;
+        p {
+          padding: 4px;
+          text-align: center;
+          font-size: 0.8em;
+        }
+      }
+      .semicircle {
+        width: 5em;
+        height: 5em;
+        line-height: 5em;
+        position: absolute;
+        top: 30vh;
+        font-size: 1em;
+        color: #efefef;
+        background: RGBA(64, 74, 122, 0.6);
+        overflow: hidden;
+      }
+      .contents_title {
+        transition: 1s all ease;
+        line-height: 1em;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+      .ment {
+        opacity: 0;
+        font-size: 1px;
+        transition: 1s all ease;
+      }
+      &.on {
+        .contents_title {
+          font-size: 1.5em;
+          transition: 1s all ease;
+          text-shadow: 0px 0px 10px #FFF;
+        }
+        .ment {
+          opacity: 1;
+          margin-top: 8em;
+          padding: 3em 0;
+          font-size: 1em;
+          line-height: 1.2em;
+          font-style: italic;
+          text-align: center;
+          text-shadow: 1px 1px 2px #333;
+          transition: 1s all ease;
+        }
+        .tel {
+          bottom: 1em;
+          opacity: 1;
+          transition: 1s all ease;
+        }
+      }
+      .tel {
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        opacity: 0;
+        font-size: 0.9em;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 0px 10px #333;
+        p {
+          margin-bottom: 10px;
+        }
+        div.img {
+          width: 2.6em;
+          height: 2.5em;
+          border-radius: 50%;
+          padding: 10px;
+          margin: 0 auto;
+          background-color: rgba(255, 255, 255, 0.8);
+          img {
+            height: 100%;
+            margin-left: 10%;
+          }
+        }
+      }
+    } 
+  }
+  
+  // 혼주소개
+  .contact_2 {
+    font-size: 4vw;
+    .parent {
+      margin-top: 1em;
+      float: left;
+      width: 50%;
+      h3 {
+        font-size: 0.8em;
+        text-align: center;
+        margin: 1em 0;
+      }
+      .info {
+        margin: 0.8em auto;
+        width: 80%;
+        text-align:justify;
+        p {
+          font-size: 0.7em;
+          display: inline;
+            &.name {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.3em;
+            padding-left: 0.5em;
+            }
+        } 
+        a {
+          vertical-align: middle;
+          border: 1px solid #333; box-sizing: border-box;
+          border-radius: 5px;
+          padding: 0.2em 0.5em;
+          background: #3D4882;
+          color: #efefef;
+          
+        }
+      }
+    }
+  }
+}
+// 신랑신부&혼주소개
+
+// 신랑신부 클릭 애니메이션
+@keyframes finger_click {
+  0% {
+		opacity: 0.2;
+		transform: scale(1.3)
+  }
+  20% {
+		opacity: 0.6;
+		transform: scale(1)
+  }
+  60% {
+		opacity: 0.6;
+		transform: scale(1)	
+	}
+  100% {
+		opacity: 0.2;
+		transform: scale(1.3)
+  }
+}
+// 신랑신부 클릭 애니메이션
+
+// 갤러리
+.gallery {
+  // 갤러리 텍스트
+  .gallery_info {
+    position: absolute;
+    top: 2em;
+    text-align: center;
+    width: 100vw;
+    color: #666;
+    text-shadow: 0px 0px 10px #ECC1CF;
+    z-index: 10;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  // 갤러리 텍스트
+	div.item {
+		height: 100vh;
+		// margin: 0 auto;
+		overflow: hidden;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.slide_01 {
+		background-image: url(../img/slide_01.jpg);
+	}
+	.slide_02 {
+		background-image: url(../img/slide_02.jpg);
+	}
+	.slide_03 {
+		background-image: url(../img/slide_03.jpg);
+	}
+	.slide_04 {
+		background-image: url(../img/slide_04.jpg);
+	}
+	.slide_05 {
+		background-image: url(../img/slide_05.jpg);
+	}
+	.slide_06 {
+		background-image: url(../img/slide_06.jpg);
+	}
+	.slide_07 {
+		background-image: url(../img/slide_07.jpg);
+	}
+	.slide_08 {
+		background-image: url(../img/slide_08.jpg);
+	}
+	.slide_09 {
+		background-image: url(../img/slide_09.jpg);
+	}
+	.slide_10 {
+		background-image: url(../img/slide_10.jpg);
+	}
+}
+// 갤러리
+
+// 오시는길
+.location {
+  background: url(../img/bg_photo_02.jpg) no-repeat;
+	background-position: right bottom;
+  background-size: 70vh;
+  h2 {
+		margin: 1em;
+		text-align: center;
+		font-weight: bold;
+	}
+  .map {
+    text-align: center;
+    img {
+      max-width: 600px;
+    }
+    p {
+      float: right;
+      border: 1px solid #629C46; box-sizing: border-box;
+      background: #75B45A;
+      color: #fff;
+      font-size: 0.7em;
+      margin-right: 2em;
+      padding: 0.7em;
+    }
+  }
+  .location_text {
+    font-size: 2.5vh; //디바이스 높이로 설정
+		position: absolute;
+		bottom: 1em;
+		margin: 0 3em;
+		p {
+			text-shadow: 0px 0px 20px #fff;
+      // padding-top: 0.1em;
+      font-size: 0.9em;
+      line-height: 1.2em;
+			&.bold {
+				font-weight: bold;
+				padding-top: 0.8em;
+			}
+		}
+	}
+}
+// 오시는길
+
+// 가로막기 CSS
+.mpp_landscape {
+	display: none
+}
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+	.mpp_landscape {
+		position: fixed;
+		display: block;
+		z-index: 100;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: #666 
+	}
+	.mpp_landscape_box {
+		position: absolute;
+		width: 100px;
+		height: 50px;
+		border: 2px solid #efefef;
+		border-radius: 8px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		-webkit-animation: mpp_landscape_anibox 1.5s infinite;
+		animation: mpp_landscape_anibox 1.5s infinite;
+	}
+	.mpp_landscape_box::before {
+		content: '';
+		position: absolute;
+		display: bloc;
+		width: 76px;
+		height: 50px;
+		border: 2px solid #efefef;
+		top: -2px;
+		left: 9px
+	}
+	.mpp_landscape_box2 {
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		right: 1px;
+		top: 20px
+	}
+	.mpp_landscape_text {
+		font-size: 1em;
+		position: absolute;
+		height: 0;
+		top: 130px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		color: #FFF;
+		text-align: center
+	}
+	@-webkit-keyframes mpp_landscape_anibox{
+		0% {
+				-webkit-transform: rotate(0);
+				opacity: 0
+		}
+		20% {
+				-webkit-transform: rotate(0);
+				opacity: 1
+		}
+		65% {
+				-webkit-transform: rotate(100deg);
+				opacity: 1
+		}
+		80% {
+				-webkit-transform: rotate(80deg);
+				opacity: 1
+		}
+		85% {
+				-webkit-transform: rotate(95deg);
+				opacity: 1
+		}
+		90% {
+				-webkit-transform: rotate(85deg);
+				opacity: 1
+		}
+		95% {
+				-webkit-transform: rotate(90deg);
+				opacity: 1
+		}
+		100% {
+				-webkit-transform: rotate(90deg);
+				opacity: 0
+		}
+	}
+	@keyframes mpp_landscape_anibox{
+		0% {
+				transform: rotate(0);
+				opacity: 0
+		}
+		20% {
+				transform: rotate(0);
+				opacity: 1
+		}
+		65% {
+				transform: rotate(100deg);
+				opacity: 1
+		}
+		80% {
+				transform: rotate(80deg);
+				opacity: 1
+		}
+		85% {
+				transform: rotate(95deg);
+				opacity: 1
+		}
+		90% {
+				transform: rotate(85deg);
+				opacity: 1
+		}
+		95% {
+				transform: rotate(90deg);
+				opacity: 1
+		}
+		100% {
+				transform: rotate(90deg);
+				opacity: 0
+		}
+	}
+}
+// 가로막기 CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
