@@ -501,6 +501,7 @@ body h3 {
   margin: 0 auto;
   margin-top: 1em;
   background: #FDFFF6;
+  cursor: pointer;
 }
 .more_info .message2 {
   margin: 0 3em;
@@ -541,10 +542,10 @@ body h3 {
   padding: 10px;
 }
 .more_info .message_box .box_row .box_title span {
-  cursor: pointer;
   float: right;
   background: #1F3440;
   padding: 2px 4px;
+  cursor: pointer;
 }
 .more_info .message_box .box_row p {
   margin: 0 40px;
