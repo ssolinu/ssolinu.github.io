@@ -140,7 +140,7 @@ body h3 {
   }
 }
 @media screen and (min-width: 1025px) {
-  .greetings, .groom_bride, .gallery, .location, .mpp_landscape {
+  .greetings, .groom_bride, .gallery, .location, .more_info, .mpp_landscape {
     display: none;
   }
 
@@ -475,6 +475,94 @@ body h3 {
 .location .location_text p.bold {
   font-weight: bold;
   padding-top: 0.8em;
+}
+
+.more_info {
+  background: url(../img/bg_photo_03.jpg) no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+.more_info h2 {
+  margin: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.more_info h2.this {
+  margin-top: 2em;
+}
+.more_info .message {
+  width: 8em;
+  height: 8em;
+  padding-top: 1.5em;
+  border: 0.8em solid #96A99E;
+  box-sizing: border-box;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  background: #FDFFF6;
+}
+.more_info .message2 {
+  margin: 0 3em;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+.more_info .message2 p {
+  padding-top: 0.5em;
+}
+.more_info .message_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+.more_info .message_box .box_row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 50vh;
+  background: #efefef;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+.more_info .message_box .box_row .box_title {
+  background: #96A99E;
+  font-size: 0.8em;
+  text-align: center;
+  color: #efefef;
+  overflow: hidden;
+  padding: 10px;
+}
+.more_info .message_box .box_row .box_title span {
+  cursor: pointer;
+  float: right;
+  background: #1F3440;
+  padding: 2px 4px;
+}
+.more_info .message_box .box_row p {
+  margin: 0 40px;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  padding-top: 1em;
+}
+.more_info .message_box .box_row .account_number {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.more_info .message_box .box_row .account_number p {
+  margin: 4px 0 0 0;
+  padding: 4px;
+  background: #455F6D;
+  color: #fff;
 }
 
 .mpp_landscape {

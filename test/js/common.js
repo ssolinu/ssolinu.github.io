@@ -35,6 +35,14 @@ $(".box").click(function () {
   $(this).addClass("on");
 });
 // 신랑신부 토글
+// 추가 안내 토글
+$(".message").click(function () {
+  $(".message_box").css("display", "block");
+});
+$(".close").click(function () {
+  $(".message_box").css("display", "none");
+});
+// 추가 안내 토글
 
 // 기본 자동 실행 코드 
 $(document).ready(function () {
@@ -47,6 +55,7 @@ $(document).ready(function () {
     $(".main").onepage_scroll({
       sectionContainer: "section",
       easing: "ease",
+      // animationTime: 2000,
       animationTime: 2000,
       pagination: false,
       keyboard: true,

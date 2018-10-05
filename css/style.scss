@@ -60,6 +60,7 @@ body {
   }
 
 }
+// 스포카산스
 * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
 // 기본설정
 
@@ -144,7 +145,7 @@ body {
 // 인트로 핑거 애니메이션
 // PC대응
 @media screen and (min-width: 1025px) {
-  .greetings, .groom_bride, .gallery, .location, .mpp_landscape {
+  .greetings, .groom_bride, .gallery, .location, .more_info, .mpp_landscape {
     display: none;
   }
   .intro {
@@ -501,7 +502,6 @@ body {
 		margin: 0 3em;
 		p {
 			text-shadow: 0px 0px 20px #fff;
-      // padding-top: 0.1em;
       font-size: 0.9em;
       line-height: 1.2em;
 			&.bold {
@@ -512,6 +512,97 @@ body {
 	}
 }
 // 오시는길
+// 추가 안내
+.more_info {
+  background: url(../img/bg_photo_03.jpg) no-repeat;
+	background-position: center bottom;
+  background-size: 100%;
+  h2 {
+		margin: 1em;
+		text-align: center;
+    font-weight: bold;
+    &.this {
+      margin-top: 2em;
+    }
+  }
+  .message {
+  width: 8em;
+  height: 8em;
+  padding-top: 1.5em;
+  border: 0.8em solid #96A99E; 
+  box-sizing: border-box;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  background: #FDFFF6
+  }
+  .message2 {
+    // width: 90%;
+    margin: 0 3em;
+    // padding: 1em;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    p {
+      padding-top: 0.5em;
+    };
+  }
+  .message_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    .box_row {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80%;
+      height: 50vh;
+      background: #efefef;
+      border: 1px solid #333; box-sizing: border-box;
+      .box_title {
+        background: #96A99E;
+        font-size: 0.8em;
+        text-align: center;
+        color: #efefef;
+        overflow: hidden;
+        padding: 10px;
+        span {
+          cursor: pointer;
+          float: right;
+          background: #1F3440;
+          padding: 2px 4px;
+        }
+      }
+      p {
+        margin: 0 40px;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: 0.8em;
+        padding-top: 1em;
+      }
+      .account_number {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        p {
+          margin: 4px 0 0 0;
+          padding: 4px;
+          background: #455F6D;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+// 추가 안내
 
 // 가로막기 CSS
 .mpp_landscape {
@@ -643,7 +734,6 @@ body {
 	}
 }
 // 가로막기 CSS
-
 
 
 

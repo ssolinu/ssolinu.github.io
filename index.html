@@ -16,7 +16,7 @@
   <meta property="og:description" content="11월 10일 창인과 소현이 서로 함께 합니다. 축복해 주세요 ^^">
   <!-- //오픈그래프 프로토콜 -->
   <title>창인과 소현 결혼 합니다. [ 11월 10일 오후4시 ]</title>
-  <link rel="stylesheet" href="css/style.css?t1">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <!-- Onepage scroll -->
   <link rel="stylesheet" href="css/onepage-scroll.css">
   <!-- Owl Important Owl stylesheet -->
@@ -211,6 +211,34 @@
     <p class="bold">다온플라츠 컨벤션 : <a href="tel:02-453-0102">02)453-0102</a></p>
   </div>
 </section>
+<!-- 추가 안내 -->
+<section class="more_info">
+  <h2>- 추가 안내 -</h2>
+  <div class="message">만약<br>오시기<br>힘드시다면</div>
+  <h2 class="this">- 이 모바일 청첩장은 -</h2>
+  <div class="message2">
+    <p>잘 만들진 못해도 직접 만들어서 보여드리고 싶어서</p>
+    <p>지인들과 함께 찍은 셀프웨딩 사진들과 직접 쓴 캘리그라피로 직접 코딩을 해서 제작을 하였습니다.</p>
+    <p>직접 하다 보니 마음대로 하는 맛은 있는데 버그도 많네요 ^^</p>
+    <p>미흡하더라도 예쁘게 잘 봐주시기 바랍니다.</p>
+    <br>
+    <p>PS : 매일매일 조금씩 계속 업그레이드가 되니 또 구경하러 오세요 ^^</p>
+  </div>
+  <div class="message_box">
+    <div class="box_row">
+      <div class="box_title">오시기 힘드시다면...
+        <span class="close">닫기</span>
+      </div>
+      <p>바쁜 일정 속 안타깝게도 못 오시는 분들께서 혹여나 미안한 마음 갖지 마시길 바라는 마음으로 계좌 번호를 적어 드립니다.</p>
+      <p>예쁜 모습으로 잘 살도록 하겠습니다.</p>
+      <p>감사합니다.</p>
+      <div class="account_number">
+        <p>우리은행 143-288072-02-001 백창인</p>
+        <p>우리은행 143-288072-02-001 이소현</p>
+      </div>
+      </div>
+    </div>
+</section>
 <!-- 가로막기 -->
 <div class='mpp_landscape'>
   <div class='mpp_landscape_box'>
@@ -228,27 +256,27 @@
 <script src="js/jquery.onepage-scroll.js"></script>
 <!-- Owl Include js plugin -->
 <script src="owlcarousel/owl.carousel.min.js"></script>
-<script src="js/common.js"></script>
+<!-- <script src="js/common.js"></script> -->
 <!-- //자바스크립트 -->
 <script>
   // 자스 CSS 캐시 없이 하기 위한 임시방편
-  // function includeJs(filepath) {
-  //   var js = document.createElement("script");
-  //   var timestamp = new Date().getTime();
-  //   js.type = "text/javascript";
-  //   js.src = filepath + "?v=" + timestamp;
-  //   document.body.appendChild(js);
-  // }
-  // includeJs("js/common.js");
+  function includeJs(filepath) {
+    var js = document.createElement("script");
+    var timestamp = new Date().getTime();
+    js.type = "text/javascript";
+    js.src = filepath + "?v=" + timestamp;
+    document.body.appendChild(js);
+  }
+  includeJs("js/common.js");
   // 자스 CSS 캐시 없이 하기 위한 임시방편
-  // function includeCss(filepath) {
-  //   var css = document.createElement("link");
-  //   var timestamp = new Date().getTime();
-  //   css.rel = "stylesheet";
-  //   css.href = filepath + "?v=" + timestamp;
-  //   document.body.appendChild(css);
-  // }
-  // includeCss("css/style.css");
+  function includeCss(filepath) {
+    var css = document.createElement("link");
+    var timestamp = new Date().getTime();
+    css.rel = "stylesheet";
+    css.href = filepath + "?v=" + timestamp;
+    document.body.appendChild(css);
+  }
+  includeCss("css/style.css");
 </script>
 </body>
 </html>
