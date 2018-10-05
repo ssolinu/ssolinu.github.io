@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- 오픈그래프 프로토콜 -->
+  <meta name="title" content="[11.10] 창인&소현 결혼 합니다.">
+  <meta name="description" content="11월10일 창인과 소현이 서로 함께 합니다. 축복해 주세요">
+  <meta name="keywords" content="쏘펭, 리누, 결혼, 청첩장">
+  <meta property="og:site_name" content="창인&소현 모바일 청첩장">
+  <meta property="og:url" content="http://ssolinu.kr">
+  <meta property="og:title" content="[11.10] 창인&소현 결혼 합니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://ssolinu.kr/img/opengraph.jpg">
+  <meta property="og:description" content="11월 10일 창인과 소현이 서로 함께 합니다. 축복해 주세요 ^^">
+  <!-- //오픈그래프 프로토콜 -->
+  <title>창인과 소현 결혼 합니다. [ 11월 10일 오후4시 ]</title>
+  <style>
+    body {
+      height: 100vh;
+      background: url(../img/bg_photo_02.jpg) no-repeat;
+      background-size: 100%;
+      background-position: bottom right;
+    }
+    section {
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto auto auto 100px;
+      width: 380px;
+      height: 640px;
+      border: 10px solid #F8D7EE; box-sizing: border-box;
+    }
+    .qr_code {
+      display: block;
+      position: absolute;
+      top: 200px;
+      right: 100px;
+      /* width: 150px; */
+      text-align: center;
+      }
+      .qr_code img {
+        width: 100%;
+      }
+      .qr_code p {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+
+  </style>
+</head>
+<body class="pc">
+	<!-- 페이지 시작 -->
+	<main>
+		<section>
+      <iframe src="../index.html" frameborder="0"></iframe>
+      <div class="qr_code">
+        <img src="../img/qr.svg" alt="QR코드">
+        <p>모바일에서 접속해 주세요 ^^;</p>
+      </div>
+		</section>
+	</main>
+	<!-- //페이지 끝 -->
+	<!-- 자바스크립트 -->
+  <!-- <script src="../js/jquery-3.3.1.min.js"></script> -->
+	<!-- 내부 스크립트 -->
+	<script>
+    var w1 = document.body.clientWidth;
+    if (w1 < 768) {
+      location.href = '../index.html';
+    }
+
+    window.onresize = resize;
+    function resize() {
+      var w2 = document.body.clientWidth;
+      if (w2 < 768) {
+        location.href = '../index.html';
+      }
+    } 
+	</script>
+	<!-- //자바스크립트 -->
+</body>
+</html>
+

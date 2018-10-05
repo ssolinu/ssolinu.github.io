@@ -526,21 +526,20 @@ body {
     }
   }
   .message {
-  width: 8em;
-  height: 8em;
-  padding-top: 1.5em;
-  border: 0.8em solid #96A99E; 
-  box-sizing: border-box;
-  border-radius: 100%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1em;
-  background: #FDFFF6
+    width: 8em;
+    height: 8em;
+    padding-top: 1.5em;
+    border: 0.8em solid #96A99E; 
+    box-sizing: border-box;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+    background: #FDFFF6;
+    cursor: pointer;
   }
   .message2 {
-    // width: 90%;
     margin: 0 3em;
-    // padding: 1em;
     font-size: 0.8em;
     line-height: 1.4em;
     p {
@@ -574,10 +573,11 @@ body {
         overflow: hidden;
         padding: 10px;
         span {
-          cursor: pointer;
           float: right;
           background: #1F3440;
           padding: 2px 4px;
+          cursor: pointer;
+
         }
       }
       p {
@@ -735,10 +735,6 @@ body {
 	}
 }
 // 가로막기 CSS
-
-
-
-
 
 
 
