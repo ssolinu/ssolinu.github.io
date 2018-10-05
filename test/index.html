@@ -36,7 +36,7 @@
   <!-- 페이지 로딩 스크립트 -->
   <script>
     // PC접속시 리다이렉션
-    if (document.body.clientWidth > 769) {
+    if ($(window).width() > 769) {
       location.href = 'pc/index.html';
     };
 
