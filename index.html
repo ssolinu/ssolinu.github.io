@@ -30,10 +30,15 @@
   <!-- 페이지 로딩 스크립트 -->
   <script>
     // PC접속시 리다이렉션
-    window.onresize = resize;
+      var w1 = document.body.clientWidth;
+        if (w1 > 769) {
+          location.href = 'pc/index.html';
+        }
+
+      window.onresize = resize;
       function resize() {
-        var w = document.body.clientWidth;
-        if (w > 769) {
+        var w2 = document.body.clientWidth;
+        if (w2 > 769) {
           location.href = 'pc/index.html';
         }
       } 

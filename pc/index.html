@@ -70,10 +70,15 @@
   <!-- <script src="../js/jquery-3.3.1.min.js"></script> -->
 	<!-- 내부 스크립트 -->
 	<script>
+    var w1 = document.body.clientWidth;
+    if (w1 < 768) {
+      location.href = '../index.html';
+    }
+
     window.onresize = resize;
     function resize() {
-      var w = document.body.clientWidth;
-      if (w > 768) {
+      var w2 = document.body.clientWidth;
+      if (w2 < 768) {
         location.href = '../index.html';
       }
     } 
