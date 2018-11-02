@@ -547,6 +547,9 @@ body h3 {
   padding: 2px 4px;
   cursor: pointer;
 }
+.more_info .message_box .box_row #toggle2 {
+  display: none;
+}
 .more_info .message_box .box_row p {
   margin: 0 40px;
   text-align: center;

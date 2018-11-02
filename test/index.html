@@ -18,7 +18,7 @@
   <title>창인과 소현 결혼 합니다. [ 11월 10일 오후4시 ]</title>
   <link rel="stylesheet" href="css/style.css">
   <!-- Onepage scroll -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.css" />
+  <link rel="stylesheet" href="css/onepage-scroll.css">
   <!-- Owl Important Owl stylesheet -->
   <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
@@ -44,9 +44,9 @@
   </script>
 </head>
 <body>
-<main class="main fullpage">
+<main class="main">
 <!-- 인트로 -->
-<section class="intro section">
+<section class="intro">
   <div id="loading">
     <img id="loading-image" src="img/loading.gif" alt="Loading..." />
   </div>
@@ -67,7 +67,7 @@
   </div>
 </section>
 <!-- 인사말 -->
-<section class="greetings section">
+<section class="greetings">
   <div class="greetings_box">
     <p>
       창인과 소현,
@@ -103,7 +103,7 @@
   </div>
 </section>
 <!-- 신랑신부 & 혼주 소개 -->
-<section class="groom_bride section">
+<section class="groom_bride">
   <div class="contact_1">
     <div class="groom box">
       <div class="finger">
@@ -174,7 +174,7 @@
   </div>
 </section>
 <!-- 신랑신부 갤러리 -->
-<section class="gallery section">
+<section class="gallery">
   <div class="gallery_info">
     <p>우리의 모습 공개 합니다. ^^</p>
     <p>손으로 좌우로 슬라이드 해주세요</p>
@@ -193,7 +193,7 @@
   </div>
 </section>
 <!-- 오시는길 -->
-<section class="location section">
+<section class="location">
   <h2>- 오시는 길 -</h2>
   <div class="map">
     <img src="img/map.png" alt="오시는길">
@@ -216,7 +216,7 @@
   </div>
 </section>
 <!-- 추가 안내 -->
-<section class="more_info section">
+<section class="more_info">
   <h2>- 추가 안내 -</h2>
   <div class="message">만약<br>오시기<br>힘드시다면</div>
   <h2 class="this">- 이 모바일 청첩장은 -</h2>
@@ -233,10 +233,11 @@
       <div class="box_title">오시기 힘드시다면...
         <span class="close">닫기</span>
       </div>
-      <p>바쁜 일정 속 안타깝게도 못 오시는 분들께서 혹여나 미안한 마음 갖지 마시길 바라는 마음으로 계좌 번호를 적어 드립니다.</p>
+      <p id="toggle1">바쁜 일정 속 안타깝게도 못 오시는 분들께서 혹여나 미안한 마음 갖지 마시길 바라는 마음으로 계좌 번호를 적어 드립니다.</p>
+      <p id="toggle2">바쁜 일정 속 안타깝게도 못 오시는 분들께서 혹여나 미안한 마음 갖지 마시길 바랍니다.</p>
       <p>예쁜 모습으로 잘 살도록 하겠습니다.</p>
       <p>감사합니다.</p>
-      <div class="account_number">
+      <div id="account_number" class="account_number">
         <p>우리은행 143-288072-02-001 백창인</p>
         <p>국민은행 213-21-1580-852 이소현</p>
       </div>
@@ -257,30 +258,28 @@
 <!-- Countdown js plugin -->
 <script src="js/jquery.countdown.min.js"></script>
 <!-- One page js plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.js"></script>
+<script src="js/jquery.onepage-scroll.js"></script>
 <!-- Owl Include js plugin -->
 <script src="owlcarousel/owl.carousel.min.js"></script>
 <script src="js/common.js"></script>
 <!-- //자바스크립트 -->
 <script>
-  // 자스 CSS 캐시 없이 하기 위한 임시방편
-  // function includeJs(filepath) {
-  //   var js = document.createElement("script");
-  //   var timestamp = new Date().getTime();
-  //   js.type = "text/javascript";
-  //   js.src = filepath + "?v=" + timestamp;
-  //   document.body.appendChild(js);
-  // }
-  // includeJs("js/common.js");
-  // 자스 CSS 캐시 없이 하기 위한 임시방편
-  // function includeCss(filepath) {
-  //   var css = document.createElement("link");
-  //   var timestamp = new Date().getTime();
-  //   css.rel = "stylesheet";
-  //   css.href = filepath + "?v=" + timestamp;
-  //   document.body.appendChild(css);
-  // }
-  // includeCss("css/style.css");
+  var href = window.location.href; // url을 긁어온다
+  var queryString = href.split('?'); // url을 '?'를 기준으로 앞뒤로 나누어 배열로 저장한다
+  var params = queryString[1].split('&'); // 'queryString'의 뒷쪽에 있는 내용을 또 '&'를 기준으로 나눈다
+  var size = params.length; // 파라미터들의 갯수를 구한다
+  var target1 = document.getElementById("toggle1");
+  var target2 = document.getElementById("toggle2");
+  var target3 = document.getElementById("account_number");
+
+  for (var i = 0; i < size; i++) { // 파라미터 갯수만큼 반복한다
+    var param = params[i].split('=');  // 파라미터를 '='으로 나눈다
+    if (param[0] == 'target' && param[1] == '01') { // 파라미터이름이 target 내용이 01인게 있다면!!
+      target1.style.display = "none"; // 숨겨야할 그넘의 엘리먼트를 숨겨버린다!!
+      target2.style.display = "block"; // 숨겨야할 그넘의 엘리먼트를 숨겨버린다!!
+      target3.style.display = "none"; // 숨겨야할 그넘의 엘리먼트를 숨겨버린다!!
+    }
+  }
 </script>
 </body>
 </html>

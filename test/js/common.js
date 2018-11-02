@@ -6,8 +6,11 @@ $(".contact_1").css("height", h*0.75 );
 $(".contact_2").css("height", h*0.25 );
 $("div.item").css("height", h );
 $(".location_text").css("font-size", h*0.025 );
-
 //vh 안먹어서 JS로 지정해주기
+
+
+
+
 
 
 // D데이 타이머 
@@ -46,36 +49,23 @@ $(".close").click(function () {
 
 // 기본 자동 실행 코드 
 $(document).ready(function () {
-
-
-
-    $('#fullpage').fullpage({
-      //options here
-      autoScrolling: false,
-      scrollHorizontally: true
-    });
-
-    //methods
-    $.fn.fullpage.setAllowScrolling(false);
-
-
 // 
 // 
   //PC검출 적용
-  // var w = document.body.clientWidth;
-  // if (w < 1025) {
-  //   // 원페이지 플러그인 실행
-  //   $(".main").onepage_scroll({
-  //     sectionContainer: "section",
-  //     easing: "ease",
-  //     // animationTime: 2000,
-  //     animationTime: 2000,
-  //     pagination: false,
-  //     keyboard: true,
-  //     loop: false
-  //   });
-  //   // 원페이지 플러그인 실행
-  // }
+  var w = document.body.clientWidth;
+  if (w < 1025) {
+    // 원페이지 플러그인 실행
+    $(".main").onepage_scroll({
+      sectionContainer: "section",
+      easing: "ease",
+      // animationTime: 2000,
+      animationTime: 2000,
+      pagination: false,
+      keyboard: true,
+      loop: false
+    });
+    // 원페이지 플러그인 실행
+  }
   //PC검출 적용
 
   //갤러리 인포 토글 
